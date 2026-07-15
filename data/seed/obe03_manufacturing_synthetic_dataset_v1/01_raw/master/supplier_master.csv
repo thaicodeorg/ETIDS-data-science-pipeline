@@ -1,0 +1,19 @@
+supplier_id,supplier_name,country,quality_score,lead_time_days,on_time_rate,risk_rating,preferred_flag,last_audit_date
+SUP-001,Supplier A Components Co.,Malaysia,71.0,8,0.953,high,0,2024-03-29
+SUP-002,Supplier B Components Co.,Malaysia,89.9,26,0.782,low,1,2024-11-16
+SUP-003,Supplier C Components Co.,China,84.7,20,0.824,medium,0,2023-11-16
+SUP-004,Supplier D Components Co.,Japan,88.6,20,0.797,low,1,2024-10-01
+SUP-005,Supplier E Components Co.,Thailand,85.8,27,0.976,medium,0,2025-03-31
+SUP-006,Supplier F Components Co.,Malaysia,82.7,24,0.947,medium,0,2025-06-23
+SUP-007,Supplier G Components Co.,Vietnam,87.4,30,0.797,medium,0,2023-11-19
+SUP-008,Supplier H Components Co.,Japan,88.0,6,0.805,low,1,2025-04-01
+SUP-009,Supplier I Components Co.,Malaysia,96.1,19,0.823,low,1,2025-07-14
+SUP-010,Supplier J Components Co.,Malaysia,97.0,35,0.842,low,1,2024-01-16
+SUP-011,Supplier K Components Co.,Japan,96.3,12,0.841,low,1,2025-01-09
+SUP-012,Supplier L Components Co.,South Korea,92.1,13,0.913,low,1,2024-10-22
+SUP-013,Supplier M Components Co.,China,71.4,34,0.838,high,0,2024-11-28
+SUP-014,Supplier N Components Co.,China,87.0,27,0.844,medium,0,2024-04-22
+SUP-015,Supplier O Components Co.,China,95.9,32,0.876,low,1,2024-08-26
+SUP-016,Supplier P Components Co.,Thailand,84.5,23,0.966,medium,0,2024-05-06
+SUP-017,Supplier Q Components Co.,China,76.8,11,0.953,high,0,2025-05-13
+SUP-018,Supplier R Components Co.,Thailand,71.7,35,0.798,high,0,2024-10-13

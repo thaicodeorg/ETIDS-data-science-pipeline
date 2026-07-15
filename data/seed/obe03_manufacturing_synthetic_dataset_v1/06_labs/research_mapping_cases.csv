@@ -1,0 +1,5 @@
+case_id,topic,research_question,dataset_files,possible_methods,expected_metric
+RC-001,Predictive maintenance,Can rising vibration and temperature predict machine failure within 7 days?,machine_failure_features.csv; maintenance_log.csv; sensor_reading.csv,"RandomForest, XGBoost, LSTM, SHAP","Recall, F1, PR-AUC"
+RC-002,Quality prediction,Which production and supplier factors explain high defect risk?,quality_risk_features.csv; quality_inspection.csv; supplier_master.csv,"AutoML, Gradient Boosting, SHAP, Fairness metrics","ROC-AUC, recall, group-wise false positive rate"
+RC-003,Delivery risk,"Can order, supplier, capacity, and quality-hold factors predict late shipment?",delivery_risk_features.csv; sales_order.csv; shipment.csv,"Logistic Regression, RandomForest, calibration, dashboarding","ROC-AUC, Brier score, lift"
+RC-004,RAG for manufacturing analytics,Can a small RAG system answer KPI and governance questions from SOP documents?,rag_policy_docs.jsonl; maintenance_notes.csv; data_quality_rules.csv,"BM25, embeddings, retrieval evaluation","faithfulness, relevance, citation quality"

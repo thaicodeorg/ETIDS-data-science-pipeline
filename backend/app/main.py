@@ -16,7 +16,7 @@ from .pipeline import (
 settings = get_settings()
 
 app = FastAPI(
-    title="OBE03 Manufacturing Data Science Pipeline API",
+    title="ETIDS Manufacturing Data Science Pipeline API",
     version="1.0.0",
     description="FastAPI backend for Lecture 3 data wrangling and Lecture 4 dashboard labs.",
 )
@@ -33,7 +33,7 @@ app.add_middleware(
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "service": "obe03-pipeline-api"}
+    return {"status": "ok", "service": "etids-pipeline-api"}
 
 
 @app.post("/pipeline/ingest")
@@ -142,7 +142,7 @@ def pipeline_flow():
             "Data Warehouse / Data Mart: PostgreSQL raw, clean, mart schemas",
             "Apache Superset: Dataset, Metric Layer, Chart, Dashboard, Role-based Access / Row-level Security",
         ],
-        "airflow_dag": "obe03_l3_l4_manufacturing_pipeline",
+        "airflow_dag": "etids_l3_l4_manufacturing_pipeline",
         "api_sequence": [
             "POST /pipeline/ingest",
             "POST /pipeline/clean",

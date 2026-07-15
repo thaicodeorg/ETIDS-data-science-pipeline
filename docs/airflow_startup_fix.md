@@ -26,7 +26,7 @@ The first command ran without arguments, so Airflow exited and Docker restarted 
 The Airflow startup command is now single-line for the user creation/reset section:
 
 ```bash
-airflow users create --username "$AIRFLOW_WWW_USER_USERNAME" --password "$AIRFLOW_WWW_USER_PASSWORD" --firstname OBE03 --lastname Admin --role Admin --email admin@example.com || airflow users reset-password -u "$AIRFLOW_WWW_USER_USERNAME" -p "$AIRFLOW_WWW_USER_PASSWORD"
+airflow users create --username "$AIRFLOW_WWW_USER_USERNAME" --password "$AIRFLOW_WWW_USER_PASSWORD" --firstname ETIDS --lastname Admin --role Admin --email admin@example.com || airflow users reset-password -u "$AIRFLOW_WWW_USER_USERNAME" -p "$AIRFLOW_WWW_USER_PASSWORD"
 ```
 
 The temporary `_PIP_ADDITIONAL_REQUIREMENTS: requests` setting was also removed to avoid the repeated startup warning. The base Airflow image already includes `requests`.

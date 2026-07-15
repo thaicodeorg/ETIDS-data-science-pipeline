@@ -1,0 +1,768 @@
+table_name,relative_path,column_name,data_type_hint,description,sensitive_or_private,suggested_use
+data_quality_rules,00_documentation/data_quality_rules.csv,rule_id,string,Rule id.,no,key/join
+data_quality_rules,00_documentation/data_quality_rules.csv,table_name,string,Table name.,no,analysis/modeling
+data_quality_rules,00_documentation/data_quality_rules.csv,field_name,string,Field name.,no,analysis/modeling
+data_quality_rules,00_documentation/data_quality_rules.csv,rule_description,string,Rule description.,no,analysis/modeling
+data_quality_rules,00_documentation/data_quality_rules.csv,severity,string,Severity.,no,analysis/modeling
+data_quality_rules,00_documentation/data_quality_rules.csv,suggested_action,string,Suggested action.,no,analysis/modeling
+scenario_ground_truth,00_documentation/scenario_ground_truth.csv,scenario_id,string,Scenario id.,no,key/join
+scenario_ground_truth,00_documentation/scenario_ground_truth.csv,scenario_name,string,Scenario name.,no,analysis/modeling
+scenario_ground_truth,00_documentation/scenario_ground_truth.csv,affected_files,string,Affected files.,no,analysis/modeling
+scenario_ground_truth,00_documentation/scenario_ground_truth.csv,ground_truth_signal,string,Ground truth signal.,no,analysis/modeling
+scenario_ground_truth,00_documentation/scenario_ground_truth.csv,lecture_support,string,Lecture support.,no,analysis/modeling
+obe03_alignment_matrix,00_documentation/obe03_alignment_matrix.csv,week,string,Week.,no,analysis/modeling
+obe03_alignment_matrix,00_documentation/obe03_alignment_matrix.csv,lecture,string,Lecture.,no,analysis/modeling
+obe03_alignment_matrix,00_documentation/obe03_alignment_matrix.csv,obe03_activity,string,Obe03 activity.,no,analysis/modeling
+obe03_alignment_matrix,00_documentation/obe03_alignment_matrix.csv,dataset_support,string,Dataset support.,no,analysis/modeling
+obe03_alignment_matrix,00_documentation/obe03_alignment_matrix.csv,key_files,string,Key files.,no,analysis/modeling
+obe03_alignment_matrix,00_documentation/obe03_alignment_matrix.csv,student_output,string,Student output.,no,analysis/modeling
+data_catalog,00_documentation/data_catalog.csv,relative_path,string,Relative path.,no,analysis/modeling
+data_catalog,00_documentation/data_catalog.csv,file_type,string,File type.,no,analysis/modeling
+data_catalog,00_documentation/data_catalog.csv,row_count,numeric,Row count.,no,analysis/modeling
+data_catalog,00_documentation/data_catalog.csv,column_count,numeric,Column count.,no,analysis/modeling
+data_catalog,00_documentation/data_catalog.csv,description,string,Description.,no,analysis/modeling
+entity_relationship_map,00_documentation/entity_relationship_map.csv,from_table,string,From table.,no,analysis/modeling
+entity_relationship_map,00_documentation/entity_relationship_map.csv,from_key,string,From key.,no,analysis/modeling
+entity_relationship_map,00_documentation/entity_relationship_map.csv,to_table,string,To table.,no,analysis/modeling
+entity_relationship_map,00_documentation/entity_relationship_map.csv,to_key,string,To key.,no,analysis/modeling
+entity_relationship_map,00_documentation/entity_relationship_map.csv,relationship,string,Relationship.,no,analysis/modeling
+plant_master,01_raw/master/plant_master.csv,plant_id,string,Plant identifier.,no,key/join
+plant_master,01_raw/master/plant_master.csv,plant_name,string,Plant name.,no,analysis/modeling
+plant_master,01_raw/master/plant_master.csv,region,string,Region.,no,analysis/modeling
+plant_master,01_raw/master/plant_master.csv,country,numeric,Country.,no,analysis/modeling
+plant_master,01_raw/master/plant_master.csv,timezone,datetime,Timezone.,no,analysis/modeling
+plant_master,01_raw/master/plant_master.csv,utc_offset,string,Utc offset.,no,analysis/modeling
+plant_master,01_raw/master/plant_master.csv,latitude,string,Latitude.,no,analysis/modeling
+plant_master,01_raw/master/plant_master.csv,longitude,string,Longitude.,no,analysis/modeling
+plant_master,01_raw/master/plant_master.csv,industry_cluster,string,Industry cluster.,no,analysis/modeling
+plant_master,01_raw/master/plant_master.csv,capacity_units_per_day,string,Capacity units per day.,no,analysis/modeling
+line_master,01_raw/master/line_master.csv,line_id,string,Production line identifier.,no,key/join
+line_master,01_raw/master/line_master.csv,plant_id,string,Plant identifier.,no,key/join
+line_master,01_raw/master/line_master.csv,line_name,string,Line name.,no,analysis/modeling
+line_master,01_raw/master/line_master.csv,line_type,string,Line type.,no,analysis/modeling
+line_master,01_raw/master/line_master.csv,technology_level,string,Technology level.,no,analysis/modeling
+line_master,01_raw/master/line_master.csv,shift_pattern,string,Shift pattern.,no,analysis/modeling
+line_master,01_raw/master/line_master.csv,design_rate_units_per_hour,numeric,Design rate units per hour.,no,analysis/modeling
+line_master,01_raw/master/line_master.csv,commission_date,datetime,Commission date.,no,analysis/modeling
+line_master,01_raw/master/line_master.csv,active_flag,numeric,Active flag.,no,analysis/modeling
+machine_master,01_raw/master/machine_master.csv,machine_id,string,Machine identifier.,no,key/join
+machine_master,01_raw/master/machine_master.csv,plant_id,string,Plant identifier.,no,key/join
+machine_master,01_raw/master/machine_master.csv,line_id,string,Production line identifier.,no,key/join
+machine_master,01_raw/master/machine_master.csv,machine_name,string,Machine name.,no,analysis/modeling
+machine_master,01_raw/master/machine_master.csv,machine_type,string,Machine type.,no,analysis/modeling
+machine_master,01_raw/master/machine_master.csv,manufacturer,string,Manufacturer.,no,analysis/modeling
+machine_master,01_raw/master/machine_master.csv,install_date,datetime,Install date.,no,analysis/modeling
+machine_master,01_raw/master/machine_master.csv,machine_age_years,string,Machine age years.,no,analysis/modeling
+machine_master,01_raw/master/machine_master.csv,criticality,string,Criticality.,no,analysis/modeling
+machine_master,01_raw/master/machine_master.csv,nominal_speed_rpm,numeric,Nominal speed rpm.,no,analysis/modeling
+machine_master,01_raw/master/machine_master.csv,sensor_enabled,string,Sensor enabled.,no,analysis/modeling
+machine_master,01_raw/master/machine_master.csv,maintenance_interval_days,numeric,Maintenance interval days.,no,analysis/modeling
+machine_master,01_raw/master/machine_master.csv,edge_device_id,string,Edge device id.,no,key/join
+machine_master,01_raw/master/machine_master.csv,source_system_machine_code,string,Source system machine code.,no,analysis/modeling
+supplier_master,01_raw/master/supplier_master.csv,supplier_id,string,Supplier identifier.,no,key/join
+supplier_master,01_raw/master/supplier_master.csv,supplier_name,string,Supplier name.,no,analysis/modeling
+supplier_master,01_raw/master/supplier_master.csv,country,numeric,Country.,no,analysis/modeling
+supplier_master,01_raw/master/supplier_master.csv,quality_score,numeric,Quality score.,no,analysis/modeling
+supplier_master,01_raw/master/supplier_master.csv,lead_time_days,datetime,Lead time days.,no,analysis/modeling
+supplier_master,01_raw/master/supplier_master.csv,on_time_rate,datetime,On time rate.,no,analysis/modeling
+supplier_master,01_raw/master/supplier_master.csv,risk_rating,string,Risk rating.,no,analysis/modeling
+supplier_master,01_raw/master/supplier_master.csv,preferred_flag,numeric,Preferred flag.,no,analysis/modeling
+supplier_master,01_raw/master/supplier_master.csv,last_audit_date,datetime,Last audit date.,no,analysis/modeling
+product_master,01_raw/master/product_master.csv,product_id,string,Product identifier.,no,key/join
+product_master,01_raw/master/product_master.csv,product_name,string,Product name.,no,analysis/modeling
+product_master,01_raw/master/product_master.csv,product_family,string,Product family.,no,analysis/modeling
+product_master,01_raw/master/product_master.csv,complexity_score,numeric,Complexity score.,no,analysis/modeling
+product_master,01_raw/master/product_master.csv,standard_cycle_seconds,string,Standard cycle seconds.,no,analysis/modeling
+product_master,01_raw/master/product_master.csv,standard_scrap_rate,numeric,Standard scrap rate.,no,analysis/modeling
+product_master,01_raw/master/product_master.csv,standard_energy_kwh_per_unit,numeric,Standard energy kwh per unit.,no,analysis/modeling
+product_master,01_raw/master/product_master.csv,primary_supplier_id,string,Primary supplier id.,no,key/join
+product_master,01_raw/master/product_master.csv,material_id,string,Material id.,no,key/join
+product_master,01_raw/master/product_master.csv,standard_unit_cost,numeric,Standard unit cost.,no,analysis/modeling
+product_master,01_raw/master/product_master.csv,list_price,string,List price.,no,analysis/modeling
+product_master,01_raw/master/product_master.csv,launch_date,datetime,Launch date.,no,analysis/modeling
+product_master,01_raw/master/product_master.csv,active_flag,numeric,Active flag.,no,analysis/modeling
+customer_master,01_raw/master/customer_master.csv,customer_id,string,Customer identifier.,no,key/join
+customer_master,01_raw/master/customer_master.csv,customer_name,string,Customer name.,no,analysis/modeling
+customer_master,01_raw/master/customer_master.csv,region,string,Region.,no,analysis/modeling
+customer_master,01_raw/master/customer_master.csv,country,numeric,Country.,no,analysis/modeling
+customer_master,01_raw/master/customer_master.csv,customer_segment,string,Customer segment.,no,analysis/modeling
+customer_master,01_raw/master/customer_master.csv,priority_level,string,Priority level.,no,analysis/modeling
+customer_master,01_raw/master/customer_master.csv,credit_risk_score,numeric,Credit risk score.,no,analysis/modeling
+customer_master,01_raw/master/customer_master.csv,created_date,datetime,Created date.,no,analysis/modeling
+calendar_master,01_raw/master/calendar_master.csv,date,datetime,Date.,no,analysis/modeling
+calendar_master,01_raw/master/calendar_master.csv,year,string,Year.,no,analysis/modeling
+calendar_master,01_raw/master/calendar_master.csv,month,string,Month.,no,analysis/modeling
+calendar_master,01_raw/master/calendar_master.csv,month_name,string,Month name.,no,analysis/modeling
+calendar_master,01_raw/master/calendar_master.csv,week_of_year,string,Week of year.,no,analysis/modeling
+calendar_master,01_raw/master/calendar_master.csv,day_of_week,string,Day of week.,no,analysis/modeling
+calendar_master,01_raw/master/calendar_master.csv,is_weekend,string,Is weekend.,no,analysis/modeling
+calendar_master,01_raw/master/calendar_master.csv,is_holiday,string,Is holiday.,no,analysis/modeling
+calendar_master,01_raw/master/calendar_master.csv,fiscal_year,string,Fiscal year.,no,analysis/modeling
+data_quality_rules,01_raw/master/data_quality_rules.csv,rule_id,string,Rule id.,no,key/join
+data_quality_rules,01_raw/master/data_quality_rules.csv,table_name,string,Table name.,no,analysis/modeling
+data_quality_rules,01_raw/master/data_quality_rules.csv,field_name,string,Field name.,no,analysis/modeling
+data_quality_rules,01_raw/master/data_quality_rules.csv,rule_description,string,Rule description.,no,analysis/modeling
+data_quality_rules,01_raw/master/data_quality_rules.csv,severity,string,Severity.,no,analysis/modeling
+data_quality_rules,01_raw/master/data_quality_rules.csv,suggested_action,string,Suggested action.,no,analysis/modeling
+sales_order,01_raw/erp/sales_order.csv,sales_order_id,string,Sales order id.,no,key/join
+sales_order,01_raw/erp/sales_order.csv,order_line_id,string,Order line id.,no,key/join
+sales_order,01_raw/erp/sales_order.csv,customer_id,string,Customer identifier.,no,key/join
+sales_order,01_raw/erp/sales_order.csv,product_id,string,Product identifier.,no,key/join
+sales_order,01_raw/erp/sales_order.csv,order_date,datetime,Order date.,no,analysis/modeling
+sales_order,01_raw/erp/sales_order.csv,requested_delivery_date,datetime,Requested delivery date.,no,analysis/modeling
+sales_order,01_raw/erp/sales_order.csv,promised_delivery_date,datetime,Promised delivery date.,no,analysis/modeling
+sales_order,01_raw/erp/sales_order.csv,ordered_quantity,numeric,Ordered quantity.,no,analysis/modeling
+sales_order,01_raw/erp/sales_order.csv,unit_price,string,Unit price.,no,analysis/modeling
+sales_order,01_raw/erp/sales_order.csv,discount_pct,numeric,Discount pct.,no,analysis/modeling
+sales_order,01_raw/erp/sales_order.csv,customer_priority,string,Customer priority.,no,analysis/modeling
+sales_order,01_raw/erp/sales_order.csv,order_status,string,Order status.,no,analysis/modeling
+sales_order,01_raw/erp/sales_order.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+sales_order,01_raw/erp/sales_order.csv,load_timestamp,datetime,Load timestamp.,no,analysis/modeling
+invoice,01_raw/erp/invoice.csv,invoice_id,string,Invoice id.,no,key/join
+invoice,01_raw/erp/invoice.csv,sales_order_id,string,Sales order id.,no,key/join
+invoice,01_raw/erp/invoice.csv,invoice_date,datetime,Invoice date.,no,analysis/modeling
+invoice,01_raw/erp/invoice.csv,customer_id,string,Customer identifier.,no,key/join
+invoice,01_raw/erp/invoice.csv,product_id,string,Product identifier.,no,key/join
+invoice,01_raw/erp/invoice.csv,quantity,numeric,Quantity.,no,analysis/modeling
+invoice,01_raw/erp/invoice.csv,gross_amount,numeric,Gross amount.,no,analysis/modeling
+invoice,01_raw/erp/invoice.csv,discount_amount,numeric,Discount amount.,no,analysis/modeling
+invoice,01_raw/erp/invoice.csv,net_amount,numeric,Net amount.,no,analysis/modeling
+invoice,01_raw/erp/invoice.csv,standard_cost,numeric,Standard cost.,no,analysis/modeling
+invoice,01_raw/erp/invoice.csv,margin_amount,numeric,Margin amount.,no,analysis/modeling
+invoice,01_raw/erp/invoice.csv,payment_status,string,Payment status.,no,analysis/modeling
+inventory_movement,01_raw/erp/inventory_movement.csv,inventory_movement_id,string,Inventory movement id.,no,key/join
+inventory_movement,01_raw/erp/inventory_movement.csv,movement_datetime,datetime,Movement datetime.,no,analysis/modeling
+inventory_movement,01_raw/erp/inventory_movement.csv,plant_id,string,Plant identifier.,no,key/join
+inventory_movement,01_raw/erp/inventory_movement.csv,item_id,string,Item id.,no,key/join
+inventory_movement,01_raw/erp/inventory_movement.csv,product_id,string,Product identifier.,no,key/join
+inventory_movement,01_raw/erp/inventory_movement.csv,movement_type,string,Movement type.,no,analysis/modeling
+inventory_movement,01_raw/erp/inventory_movement.csv,quantity,numeric,Quantity.,no,analysis/modeling
+inventory_movement,01_raw/erp/inventory_movement.csv,uom,string,Uom.,no,analysis/modeling
+inventory_movement,01_raw/erp/inventory_movement.csv,location_code,string,Location code.,no,analysis/modeling
+inventory_movement,01_raw/erp/inventory_movement.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+production_plan,01_raw/mes/production_plan.csv,plan_id,string,Plan id.,no,key/join
+production_plan,01_raw/mes/production_plan.csv,plan_date,datetime,Plan date.,no,analysis/modeling
+production_plan,01_raw/mes/production_plan.csv,plant_id,string,Plant identifier.,no,key/join
+production_plan,01_raw/mes/production_plan.csv,line_id,string,Production line identifier.,no,key/join
+production_plan,01_raw/mes/production_plan.csv,product_id,string,Product identifier.,no,key/join
+production_plan,01_raw/mes/production_plan.csv,planned_quantity,numeric,Planned quantity.,no,analysis/modeling
+production_plan,01_raw/mes/production_plan.csv,planned_capacity_units,string,Planned capacity units.,no,analysis/modeling
+production_plan,01_raw/mes/production_plan.csv,capacity_utilization_plan,string,Capacity utilization plan.,no,analysis/modeling
+production_plan,01_raw/mes/production_plan.csv,plan_version,string,Plan version.,no,analysis/modeling
+production_plan,01_raw/mes/production_plan.csv,planner_id,string,Planner id.,no,key/join
+production_plan,01_raw/mes/production_plan.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+work_order,01_raw/mes/work_order.csv,work_order_id,string,Manufacturing work order identifier.,no,key/join
+work_order,01_raw/mes/work_order.csv,sales_order_id,string,Sales order id.,no,key/join
+work_order,01_raw/mes/work_order.csv,plant_id,string,Plant identifier.,no,key/join
+work_order,01_raw/mes/work_order.csv,line_id,string,Production line identifier.,no,key/join
+work_order,01_raw/mes/work_order.csv,product_id,string,Product identifier.,no,key/join
+work_order,01_raw/mes/work_order.csv,planned_start_datetime,datetime,Planned start datetime.,no,analysis/modeling
+work_order,01_raw/mes/work_order.csv,planned_end_datetime,datetime,Planned end datetime.,no,analysis/modeling
+work_order,01_raw/mes/work_order.csv,actual_start_datetime,datetime,Actual start datetime.,no,analysis/modeling
+work_order,01_raw/mes/work_order.csv,actual_end_datetime,datetime,Actual end datetime.,no,analysis/modeling
+work_order,01_raw/mes/work_order.csv,planned_quantity,numeric,Planned quantity.,no,analysis/modeling
+work_order,01_raw/mes/work_order.csv,actual_quantity,numeric,Actual quantity.,no,analysis/modeling
+work_order,01_raw/mes/work_order.csv,rejected_quantity,numeric,Rejected quantity.,no,analysis/modeling
+work_order,01_raw/mes/work_order.csv,rework_quantity,numeric,Rework quantity.,no,analysis/modeling
+work_order,01_raw/mes/work_order.csv,work_order_status,string,Work order status.,no,analysis/modeling
+work_order,01_raw/mes/work_order.csv,priority_level,string,Priority level.,no,analysis/modeling
+work_order,01_raw/mes/work_order.csv,operator_team_id,string,Operator team id.,no,key/join
+work_order,01_raw/mes/work_order.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+work_order,01_raw/mes/work_order.csv,load_timestamp,datetime,Load timestamp.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,run_id,string,Production run identifier.,no,key/join
+production_run,01_raw/mes/production_run.csv,work_order_id,string,Manufacturing work order identifier.,no,key/join
+production_run,01_raw/mes/production_run.csv,machine_id,string,Machine identifier.,no,key/join
+production_run,01_raw/mes/production_run.csv,batch_id,string,Batch id.,no,key/join
+production_run,01_raw/mes/production_run.csv,run_start_datetime,datetime,Run start datetime.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,run_end_datetime,datetime,Run end datetime.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,input_quantity,numeric,Input quantity.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,output_quantity,numeric,Output quantity.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,scrap_quantity,numeric,Scrap quantity.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,rework_quantity,numeric,Rework quantity.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,setup_minutes,numeric,Setup minutes.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,runtime_minutes,datetime,Runtime minutes.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,idle_minutes,numeric,Idle minutes.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,speed_actual_ppm,numeric,Speed actual ppm.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,speed_standard_ppm,numeric,Speed standard ppm.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,operator_id,string,Operator id.,synthetic_pseudonymous,key/join
+production_run,01_raw/mes/production_run.csv,material_lot_id,string,Material lot id.,no,key/join
+production_run,01_raw/mes/production_run.csv,run_status,string,Run status.,no,analysis/modeling
+production_run,01_raw/mes/production_run.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+shift_production,01_raw/mes/shift_production.csv,shift_record_id,string,Shift record id.,no,key/join
+shift_production,01_raw/mes/shift_production.csv,production_date,datetime,Production date.,no,analysis/modeling
+shift_production,01_raw/mes/shift_production.csv,plant_id,string,Plant identifier.,no,key/join
+shift_production,01_raw/mes/shift_production.csv,line_id,string,Production line identifier.,no,key/join
+shift_production,01_raw/mes/shift_production.csv,shift_id,string,Shift id.,no,key/join
+shift_production,01_raw/mes/shift_production.csv,planned_output,string,Planned output.,no,analysis/modeling
+shift_production,01_raw/mes/shift_production.csv,good_output,string,Good output.,no,analysis/modeling
+shift_production,01_raw/mes/shift_production.csv,scrap_quantity,numeric,Scrap quantity.,no,analysis/modeling
+shift_production,01_raw/mes/shift_production.csv,rework_quantity,numeric,Rework quantity.,no,analysis/modeling
+shift_production,01_raw/mes/shift_production.csv,runtime_minutes,datetime,Runtime minutes.,no,analysis/modeling
+shift_production,01_raw/mes/shift_production.csv,downtime_minutes,datetime,Downtime minutes.,no,analysis/modeling
+shift_production,01_raw/mes/shift_production.csv,labor_hours,numeric,Labor hours.,no,analysis/modeling
+shift_production,01_raw/mes/shift_production.csv,energy_kwh,numeric,Energy kwh.,no,analysis/modeling
+shift_production,01_raw/mes/shift_production.csv,oee_estimate,numeric,Oee estimate.,no,analysis/modeling
+shift_production,01_raw/mes/shift_production.csv,supervisor_id,string,Supervisor id.,no,key/join
+shift_production,01_raw/mes/shift_production.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+machine_state_event,01_raw/scada/machine_state_event.csv,event_id,string,Event id.,no,key/join
+machine_state_event,01_raw/scada/machine_state_event.csv,machine_id,string,Machine identifier.,no,key/join
+machine_state_event,01_raw/scada/machine_state_event.csv,line_id,string,Production line identifier.,no,key/join
+machine_state_event,01_raw/scada/machine_state_event.csv,event_start,string,Event start.,no,analysis/modeling
+machine_state_event,01_raw/scada/machine_state_event.csv,event_end,string,Event end.,no,analysis/modeling
+machine_state_event,01_raw/scada/machine_state_event.csv,state_code,string,State code.,no,analysis/modeling
+machine_state_event,01_raw/scada/machine_state_event.csv,reason_code,string,Reason code.,no,analysis/modeling
+machine_state_event,01_raw/scada/machine_state_event.csv,operator_id,string,Operator id.,synthetic_pseudonymous,key/join
+machine_state_event,01_raw/scada/machine_state_event.csv,linked_work_order_id,string,Linked work order id.,no,key/join
+machine_state_event,01_raw/scada/machine_state_event.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+downtime_event,01_raw/scada/downtime_event.csv,downtime_id,datetime,Downtime id.,no,key/join
+downtime_event,01_raw/scada/downtime_event.csv,event_id,string,Event id.,no,key/join
+downtime_event,01_raw/scada/downtime_event.csv,machine_id,string,Machine identifier.,no,key/join
+downtime_event,01_raw/scada/downtime_event.csv,line_id,string,Production line identifier.,no,key/join
+downtime_event,01_raw/scada/downtime_event.csv,downtime_start,datetime,Downtime start.,no,analysis/modeling
+downtime_event,01_raw/scada/downtime_event.csv,downtime_end,datetime,Downtime end.,no,analysis/modeling
+downtime_event,01_raw/scada/downtime_event.csv,downtime_minutes,datetime,Downtime minutes.,no,analysis/modeling
+downtime_event,01_raw/scada/downtime_event.csv,reason_code,string,Reason code.,no,analysis/modeling
+downtime_event,01_raw/scada/downtime_event.csv,severity,string,Severity.,no,analysis/modeling
+downtime_event,01_raw/scada/downtime_event.csv,linked_work_order_id,string,Linked work order id.,no,key/join
+downtime_event,01_raw/scada/downtime_event.csv,recorded_by,string,Recorded by.,no,analysis/modeling
+sensor_reading,01_raw/scada/sensor_reading.csv,timestamp,datetime,Event or sensor timestamp.,no,analysis/modeling
+sensor_reading,01_raw/scada/sensor_reading.csv,plant_id,string,Plant identifier.,no,key/join
+sensor_reading,01_raw/scada/sensor_reading.csv,line_id,string,Production line identifier.,no,key/join
+sensor_reading,01_raw/scada/sensor_reading.csv,machine_id,string,Machine identifier.,no,key/join
+sensor_reading,01_raw/scada/sensor_reading.csv,sensor_id,string,Sensor id.,no,key/join
+sensor_reading,01_raw/scada/sensor_reading.csv,temperature_c,numeric,Temperature c.,no,analysis/modeling
+sensor_reading,01_raw/scada/sensor_reading.csv,vibration_mm_s,numeric,Vibration mm s.,no,analysis/modeling
+sensor_reading,01_raw/scada/sensor_reading.csv,pressure_bar,numeric,Pressure bar.,no,analysis/modeling
+sensor_reading,01_raw/scada/sensor_reading.csv,current_amp,numeric,Current amp.,no,analysis/modeling
+sensor_reading,01_raw/scada/sensor_reading.csv,speed_rpm,numeric,Speed rpm.,no,analysis/modeling
+sensor_reading,01_raw/scada/sensor_reading.csv,humidity_pct,numeric,Humidity pct.,no,analysis/modeling
+sensor_reading,01_raw/scada/sensor_reading.csv,operating_state,string,Operating state.,no,analysis/modeling
+sensor_reading,01_raw/scada/sensor_reading.csv,data_quality_flag,numeric,Data quality flag.,no,analysis/modeling
+sensor_reading,01_raw/scada/sensor_reading.csv,edge_device_id,string,Edge device id.,no,key/join
+sensor_reading,01_raw/scada/sensor_reading.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+alarm_event,01_raw/scada/alarm_event.csv,alarm_id,string,Alarm id.,no,key/join
+alarm_event,01_raw/scada/alarm_event.csv,timestamp,datetime,Event or sensor timestamp.,no,analysis/modeling
+alarm_event,01_raw/scada/alarm_event.csv,machine_id,string,Machine identifier.,no,key/join
+alarm_event,01_raw/scada/alarm_event.csv,line_id,string,Production line identifier.,no,key/join
+alarm_event,01_raw/scada/alarm_event.csv,alarm_code,string,Alarm code.,no,analysis/modeling
+alarm_event,01_raw/scada/alarm_event.csv,alarm_severity,string,Alarm severity.,no,analysis/modeling
+alarm_event,01_raw/scada/alarm_event.csv,acknowledged_flag,numeric,Acknowledged flag.,no,analysis/modeling
+alarm_event,01_raw/scada/alarm_event.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+quality_inspection,01_raw/qms/quality_inspection.csv,inspection_id,string,Inspection id.,no,key/join
+quality_inspection,01_raw/qms/quality_inspection.csv,run_id,string,Production run identifier.,no,key/join
+quality_inspection,01_raw/qms/quality_inspection.csv,work_order_id,string,Manufacturing work order identifier.,no,key/join
+quality_inspection,01_raw/qms/quality_inspection.csv,product_id,string,Product identifier.,no,key/join
+quality_inspection,01_raw/qms/quality_inspection.csv,machine_id,string,Machine identifier.,no,key/join
+quality_inspection,01_raw/qms/quality_inspection.csv,inspection_datetime,datetime,Inspection datetime.,no,analysis/modeling
+quality_inspection,01_raw/qms/quality_inspection.csv,sample_size,string,Sample size.,no,analysis/modeling
+quality_inspection,01_raw/qms/quality_inspection.csv,defect_count,numeric,Defect count.,no,analysis/modeling
+quality_inspection,01_raw/qms/quality_inspection.csv,defect_code,string,Defect code.,no,analysis/modeling
+quality_inspection,01_raw/qms/quality_inspection.csv,measurement_1,string,Measurement 1.,no,analysis/modeling
+quality_inspection,01_raw/qms/quality_inspection.csv,measurement_2,string,Measurement 2.,no,analysis/modeling
+quality_inspection,01_raw/qms/quality_inspection.csv,lower_spec_limit,string,Lower spec limit.,no,analysis/modeling
+quality_inspection,01_raw/qms/quality_inspection.csv,upper_spec_limit,string,Upper spec limit.,no,analysis/modeling
+quality_inspection,01_raw/qms/quality_inspection.csv,pass_fail,string,Pass fail.,no,analysis/modeling
+quality_inspection,01_raw/qms/quality_inspection.csv,inspector_id,string,Inspector id.,no,key/join
+quality_inspection,01_raw/qms/quality_inspection.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+customer_complaint,01_raw/qms/customer_complaint.csv,complaint_id,string,Complaint id.,no,key/join
+customer_complaint,01_raw/qms/customer_complaint.csv,shipment_id,string,Shipment id.,no,key/join
+customer_complaint,01_raw/qms/customer_complaint.csv,customer_id,string,Customer identifier.,no,key/join
+customer_complaint,01_raw/qms/customer_complaint.csv,product_id,string,Product identifier.,no,key/join
+customer_complaint,01_raw/qms/customer_complaint.csv,complaint_datetime,datetime,Complaint datetime.,no,analysis/modeling
+customer_complaint,01_raw/qms/customer_complaint.csv,complaint_text,string,Complaint text.,no,analysis/modeling
+customer_complaint,01_raw/qms/customer_complaint.csv,sentiment_label,datetime,Sentiment label.,no,analysis/modeling
+customer_complaint,01_raw/qms/customer_complaint.csv,named_entities,string,Named entities.,no,analysis/modeling
+customer_complaint,01_raw/qms/customer_complaint.csv,resolution_status,string,Resolution status.,no,analysis/modeling
+maintenance_log,01_raw/cmms/maintenance_log.csv,maintenance_id,string,Maintenance id.,no,key/join
+maintenance_log,01_raw/cmms/maintenance_log.csv,machine_id,string,Machine identifier.,no,key/join
+maintenance_log,01_raw/cmms/maintenance_log.csv,event_datetime,datetime,Event datetime.,no,analysis/modeling
+maintenance_log,01_raw/cmms/maintenance_log.csv,maintenance_type,string,Maintenance type.,no,analysis/modeling
+maintenance_log,01_raw/cmms/maintenance_log.csv,failure_code,string,Failure code.,no,analysis/modeling
+maintenance_log,01_raw/cmms/maintenance_log.csv,symptom_text,string,Symptom text.,no,analysis/modeling
+maintenance_log,01_raw/cmms/maintenance_log.csv,repair_action,string,Repair action.,no,analysis/modeling
+maintenance_log,01_raw/cmms/maintenance_log.csv,downtime_minutes,datetime,Downtime minutes.,no,analysis/modeling
+maintenance_log,01_raw/cmms/maintenance_log.csv,parts_cost,numeric,Parts cost.,no,analysis/modeling
+maintenance_log,01_raw/cmms/maintenance_log.csv,labor_hours,numeric,Labor hours.,no,analysis/modeling
+maintenance_log,01_raw/cmms/maintenance_log.csv,technician_id,string,Technician id.,no,key/join
+maintenance_log,01_raw/cmms/maintenance_log.csv,failure_severity,string,Failure severity.,no,analysis/modeling
+maintenance_log,01_raw/cmms/maintenance_log.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+operator_master,01_raw/hr/operator_master.csv,operator_id,string,Operator id.,synthetic_pseudonymous,key/join
+operator_master,01_raw/hr/operator_master.csv,operator_hash,string,Operator hash.,synthetic_pseudonymous,analysis/modeling
+operator_master,01_raw/hr/operator_master.csv,team_id,string,Team id.,no,key/join
+operator_master,01_raw/hr/operator_master.csv,plant_id,string,Plant identifier.,no,key/join
+operator_master,01_raw/hr/operator_master.csv,certification_level,string,Certification level.,no,analysis/modeling
+operator_master,01_raw/hr/operator_master.csv,experience_years,string,Experience years.,no,analysis/modeling
+operator_master,01_raw/hr/operator_master.csv,shift_preference,string,Shift preference.,no,analysis/modeling
+operator_master,01_raw/hr/operator_master.csv,employment_type,string,Employment type.,no,analysis/modeling
+operator_master,01_raw/hr/operator_master.csv,fairness_group,string,Fairness group.,no,analysis/modeling
+operator_master,01_raw/hr/operator_master.csv,active_flag,numeric,Active flag.,no,analysis/modeling
+shipment,01_raw/logistics/shipment.csv,shipment_id,string,Shipment id.,no,key/join
+shipment,01_raw/logistics/shipment.csv,sales_order_id,string,Sales order id.,no,key/join
+shipment,01_raw/logistics/shipment.csv,order_line_id,string,Order line id.,no,key/join
+shipment,01_raw/logistics/shipment.csv,customer_id,string,Customer identifier.,no,key/join
+shipment,01_raw/logistics/shipment.csv,product_id,string,Product identifier.,no,key/join
+shipment,01_raw/logistics/shipment.csv,ship_date,datetime,Ship date.,no,analysis/modeling
+shipment,01_raw/logistics/shipment.csv,promised_delivery_date,datetime,Promised delivery date.,no,analysis/modeling
+shipment,01_raw/logistics/shipment.csv,shipped_quantity,numeric,Shipped quantity.,no,analysis/modeling
+shipment,01_raw/logistics/shipment.csv,carrier,string,Carrier.,no,analysis/modeling
+shipment,01_raw/logistics/shipment.csv,distance_km,string,Distance km.,no,analysis/modeling
+shipment,01_raw/logistics/shipment.csv,late_delivery_flag,numeric,Binary target for late shipment.,no,analysis/modeling
+shipment,01_raw/logistics/shipment.csv,delay_days,numeric,Delay days.,no,analysis/modeling
+shipment,01_raw/logistics/shipment.csv,root_cause,string,Root cause.,no,analysis/modeling
+shipment,01_raw/logistics/shipment.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+supply_chain_transaction,01_raw/blockchain/supply_chain_transaction.csv,tx_id,string,Tx id.,no,key/join
+supply_chain_transaction,01_raw/blockchain/supply_chain_transaction.csv,block_timestamp,datetime,Block timestamp.,no,analysis/modeling
+supply_chain_transaction,01_raw/blockchain/supply_chain_transaction.csv,material_lot_id,string,Material lot id.,no,key/join
+supply_chain_transaction,01_raw/blockchain/supply_chain_transaction.csv,supplier_id,string,Supplier identifier.,no,key/join
+supply_chain_transaction,01_raw/blockchain/supply_chain_transaction.csv,product_id,string,Product identifier.,no,key/join
+supply_chain_transaction,01_raw/blockchain/supply_chain_transaction.csv,plant_id,string,Plant identifier.,no,key/join
+supply_chain_transaction,01_raw/blockchain/supply_chain_transaction.csv,event_type,string,Event type.,no,analysis/modeling
+supply_chain_transaction,01_raw/blockchain/supply_chain_transaction.csv,quantity,numeric,Quantity.,no,analysis/modeling
+supply_chain_transaction,01_raw/blockchain/supply_chain_transaction.csv,quality_certificate_id,string,Quality certificate id.,no,key/join
+supply_chain_transaction,01_raw/blockchain/supply_chain_transaction.csv,previous_hash,string,Previous hash.,no,analysis/modeling
+supply_chain_transaction,01_raw/blockchain/supply_chain_transaction.csv,transaction_hash,string,Transaction hash.,no,analysis/modeling
+supply_chain_transaction,01_raw/blockchain/supply_chain_transaction.csv,smart_contract_id,string,Smart contract id.,no,key/join
+smart_contract_event,01_raw/blockchain/smart_contract_event.csv,contract_event_id,string,Contract event id.,no,key/join
+smart_contract_event,01_raw/blockchain/smart_contract_event.csv,tx_id,string,Tx id.,no,key/join
+smart_contract_event,01_raw/blockchain/smart_contract_event.csv,smart_contract_id,string,Smart contract id.,no,key/join
+smart_contract_event,01_raw/blockchain/smart_contract_event.csv,event_name,string,Event name.,no,analysis/modeling
+smart_contract_event,01_raw/blockchain/smart_contract_event.csv,event_status,string,Event status.,no,analysis/modeling
+smart_contract_event,01_raw/blockchain/smart_contract_event.csv,rule_triggered,string,Rule triggered.,no,analysis/modeling
+smart_contract_event,01_raw/blockchain/smart_contract_event.csv,audit_flag,numeric,Audit flag.,no,analysis/modeling
+federated_client_map,01_raw/privacy/federated_client_map.csv,client_id,string,Client id.,no,key/join
+federated_client_map,01_raw/privacy/federated_client_map.csv,plant_id,string,Plant identifier.,no,key/join
+federated_client_map,01_raw/privacy/federated_client_map.csv,sample_count,numeric,Sample count.,no,analysis/modeling
+federated_client_map,01_raw/privacy/federated_client_map.csv,federated_learning_use,numeric,Federated learning use.,no,analysis/modeling
+privacy_risk_records,01_raw/privacy/privacy_risk_records.csv,operator_hash,string,Operator hash.,synthetic_pseudonymous,analysis/modeling
+privacy_risk_records,01_raw/privacy/privacy_risk_records.csv,plant_id,string,Plant identifier.,no,key/join
+privacy_risk_records,01_raw/privacy/privacy_risk_records.csv,shift_preference,string,Shift preference.,no,analysis/modeling
+privacy_risk_records,01_raw/privacy/privacy_risk_records.csv,certification_level,string,Certification level.,no,analysis/modeling
+privacy_risk_records,01_raw/privacy/privacy_risk_records.csv,age_band_synthetic,string,Age band synthetic.,no,analysis/modeling
+privacy_risk_records,01_raw/privacy/privacy_risk_records.csv,employment_type,string,Employment type.,no,analysis/modeling
+privacy_risk_records,01_raw/privacy/privacy_risk_records.csv,k_anonymity_group_size,string,K anonymity group size.,no,analysis/modeling
+privacy_risk_records,01_raw/privacy/privacy_risk_records.csv,privacy_risk_level,string,Privacy risk level.,no,analysis/modeling
+maintenance_notes,01_raw/nlp/maintenance_notes.csv,note_id,string,Note id.,no,key/join
+maintenance_notes,01_raw/nlp/maintenance_notes.csv,maintenance_id,string,Maintenance id.,no,key/join
+maintenance_notes,01_raw/nlp/maintenance_notes.csv,machine_id,string,Machine identifier.,no,key/join
+maintenance_notes,01_raw/nlp/maintenance_notes.csv,note_datetime,datetime,Note datetime.,no,analysis/modeling
+maintenance_notes,01_raw/nlp/maintenance_notes.csv,note_text,string,Note text.,no,analysis/modeling
+maintenance_notes,01_raw/nlp/maintenance_notes.csv,intent_label,string,Intent label.,no,analysis/modeling
+maintenance_notes,01_raw/nlp/maintenance_notes.csv,contains_safety_issue,string,Contains safety issue.,no,analysis/modeling
+defect_image_metadata,01_raw/images/defect_image_metadata.csv,image_id,string,Image id.,no,key/join
+defect_image_metadata,01_raw/images/defect_image_metadata.csv,relative_path,string,Relative path.,no,analysis/modeling
+defect_image_metadata,01_raw/images/defect_image_metadata.csv,defect_class,string,Defect class.,no,analysis/modeling
+defect_image_metadata,01_raw/images/defect_image_metadata.csv,severity_level,string,Severity level.,no,analysis/modeling
+defect_image_metadata,01_raw/images/defect_image_metadata.csv,product_id,string,Product identifier.,no,key/join
+defect_image_metadata,01_raw/images/defect_image_metadata.csv,run_id,string,Production run identifier.,no,key/join
+defect_image_metadata,01_raw/images/defect_image_metadata.csv,split,string,Split.,no,analysis/modeling
+defect_image_metadata,01_raw/images/defect_image_metadata.csv,image_note,string,Image note.,no,analysis/modeling
+dim_date,02_clean/star_schema/dim_date.csv,date,datetime,Date.,no,analysis/modeling
+dim_date,02_clean/star_schema/dim_date.csv,year,string,Year.,no,analysis/modeling
+dim_date,02_clean/star_schema/dim_date.csv,month,string,Month.,no,analysis/modeling
+dim_date,02_clean/star_schema/dim_date.csv,month_name,string,Month name.,no,analysis/modeling
+dim_date,02_clean/star_schema/dim_date.csv,week_of_year,string,Week of year.,no,analysis/modeling
+dim_date,02_clean/star_schema/dim_date.csv,day_of_week,string,Day of week.,no,analysis/modeling
+dim_date,02_clean/star_schema/dim_date.csv,is_weekend,string,Is weekend.,no,analysis/modeling
+dim_date,02_clean/star_schema/dim_date.csv,is_holiday,string,Is holiday.,no,analysis/modeling
+dim_date,02_clean/star_schema/dim_date.csv,fiscal_year,string,Fiscal year.,no,analysis/modeling
+dim_plant,02_clean/star_schema/dim_plant.csv,plant_id,string,Plant identifier.,no,key/join
+dim_plant,02_clean/star_schema/dim_plant.csv,plant_name,string,Plant name.,no,analysis/modeling
+dim_plant,02_clean/star_schema/dim_plant.csv,region,string,Region.,no,analysis/modeling
+dim_plant,02_clean/star_schema/dim_plant.csv,country,numeric,Country.,no,analysis/modeling
+dim_plant,02_clean/star_schema/dim_plant.csv,timezone,datetime,Timezone.,no,analysis/modeling
+dim_plant,02_clean/star_schema/dim_plant.csv,utc_offset,string,Utc offset.,no,analysis/modeling
+dim_plant,02_clean/star_schema/dim_plant.csv,latitude,string,Latitude.,no,analysis/modeling
+dim_plant,02_clean/star_schema/dim_plant.csv,longitude,string,Longitude.,no,analysis/modeling
+dim_plant,02_clean/star_schema/dim_plant.csv,industry_cluster,string,Industry cluster.,no,analysis/modeling
+dim_plant,02_clean/star_schema/dim_plant.csv,capacity_units_per_day,string,Capacity units per day.,no,analysis/modeling
+dim_line,02_clean/star_schema/dim_line.csv,line_id,string,Production line identifier.,no,key/join
+dim_line,02_clean/star_schema/dim_line.csv,plant_id,string,Plant identifier.,no,key/join
+dim_line,02_clean/star_schema/dim_line.csv,line_name,string,Line name.,no,analysis/modeling
+dim_line,02_clean/star_schema/dim_line.csv,line_type,string,Line type.,no,analysis/modeling
+dim_line,02_clean/star_schema/dim_line.csv,technology_level,string,Technology level.,no,analysis/modeling
+dim_line,02_clean/star_schema/dim_line.csv,shift_pattern,string,Shift pattern.,no,analysis/modeling
+dim_line,02_clean/star_schema/dim_line.csv,design_rate_units_per_hour,numeric,Design rate units per hour.,no,analysis/modeling
+dim_line,02_clean/star_schema/dim_line.csv,commission_date,datetime,Commission date.,no,analysis/modeling
+dim_line,02_clean/star_schema/dim_line.csv,active_flag,numeric,Active flag.,no,analysis/modeling
+dim_machine,02_clean/star_schema/dim_machine.csv,machine_id,string,Machine identifier.,no,key/join
+dim_machine,02_clean/star_schema/dim_machine.csv,plant_id,string,Plant identifier.,no,key/join
+dim_machine,02_clean/star_schema/dim_machine.csv,line_id,string,Production line identifier.,no,key/join
+dim_machine,02_clean/star_schema/dim_machine.csv,machine_name,string,Machine name.,no,analysis/modeling
+dim_machine,02_clean/star_schema/dim_machine.csv,machine_type,string,Machine type.,no,analysis/modeling
+dim_machine,02_clean/star_schema/dim_machine.csv,manufacturer,string,Manufacturer.,no,analysis/modeling
+dim_machine,02_clean/star_schema/dim_machine.csv,install_date,datetime,Install date.,no,analysis/modeling
+dim_machine,02_clean/star_schema/dim_machine.csv,machine_age_years,string,Machine age years.,no,analysis/modeling
+dim_machine,02_clean/star_schema/dim_machine.csv,criticality,string,Criticality.,no,analysis/modeling
+dim_machine,02_clean/star_schema/dim_machine.csv,nominal_speed_rpm,numeric,Nominal speed rpm.,no,analysis/modeling
+dim_machine,02_clean/star_schema/dim_machine.csv,sensor_enabled,string,Sensor enabled.,no,analysis/modeling
+dim_machine,02_clean/star_schema/dim_machine.csv,maintenance_interval_days,numeric,Maintenance interval days.,no,analysis/modeling
+dim_machine,02_clean/star_schema/dim_machine.csv,edge_device_id,string,Edge device id.,no,key/join
+dim_machine,02_clean/star_schema/dim_machine.csv,source_system_machine_code,string,Source system machine code.,no,analysis/modeling
+dim_product,02_clean/star_schema/dim_product.csv,product_id,string,Product identifier.,no,key/join
+dim_product,02_clean/star_schema/dim_product.csv,product_name,string,Product name.,no,analysis/modeling
+dim_product,02_clean/star_schema/dim_product.csv,product_family,string,Product family.,no,analysis/modeling
+dim_product,02_clean/star_schema/dim_product.csv,complexity_score,numeric,Complexity score.,no,analysis/modeling
+dim_product,02_clean/star_schema/dim_product.csv,standard_cycle_seconds,string,Standard cycle seconds.,no,analysis/modeling
+dim_product,02_clean/star_schema/dim_product.csv,standard_scrap_rate,numeric,Standard scrap rate.,no,analysis/modeling
+dim_product,02_clean/star_schema/dim_product.csv,standard_energy_kwh_per_unit,numeric,Standard energy kwh per unit.,no,analysis/modeling
+dim_product,02_clean/star_schema/dim_product.csv,primary_supplier_id,string,Primary supplier id.,no,key/join
+dim_product,02_clean/star_schema/dim_product.csv,material_id,string,Material id.,no,key/join
+dim_product,02_clean/star_schema/dim_product.csv,standard_unit_cost,numeric,Standard unit cost.,no,analysis/modeling
+dim_product,02_clean/star_schema/dim_product.csv,list_price,string,List price.,no,analysis/modeling
+dim_product,02_clean/star_schema/dim_product.csv,launch_date,datetime,Launch date.,no,analysis/modeling
+dim_product,02_clean/star_schema/dim_product.csv,active_flag,numeric,Active flag.,no,analysis/modeling
+dim_customer,02_clean/star_schema/dim_customer.csv,customer_id,string,Customer identifier.,no,key/join
+dim_customer,02_clean/star_schema/dim_customer.csv,customer_name,string,Customer name.,no,analysis/modeling
+dim_customer,02_clean/star_schema/dim_customer.csv,region,string,Region.,no,analysis/modeling
+dim_customer,02_clean/star_schema/dim_customer.csv,country,numeric,Country.,no,analysis/modeling
+dim_customer,02_clean/star_schema/dim_customer.csv,customer_segment,string,Customer segment.,no,analysis/modeling
+dim_customer,02_clean/star_schema/dim_customer.csv,priority_level,string,Priority level.,no,analysis/modeling
+dim_customer,02_clean/star_schema/dim_customer.csv,credit_risk_score,numeric,Credit risk score.,no,analysis/modeling
+dim_customer,02_clean/star_schema/dim_customer.csv,created_date,datetime,Created date.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,date,datetime,Date.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,plant_id,string,Plant identifier.,no,key/join
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,line_id,string,Production line identifier.,no,key/join
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,planned_quantity,numeric,Planned quantity.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,good_quantity,numeric,Good quantity.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,scrap_quantity,numeric,Scrap quantity.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,rework_quantity,numeric,Rework quantity.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,runtime_minutes,datetime,Runtime minutes.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,downtime_minutes,datetime,Downtime minutes.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,energy_kwh,numeric,Energy kwh.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,availability,string,Availability.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,performance,string,Performance.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,quality,string,Quality.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,oee,numeric,Oee.,no,analysis/modeling
+fact_production_daily,02_clean/star_schema/fact_production_daily.csv,energy_intensity_kwh_per_good_unit,numeric,Energy intensity kwh per good unit.,no,analysis/modeling
+fact_quality_daily,02_clean/star_schema/fact_quality_daily.csv,date,datetime,Date.,no,analysis/modeling
+fact_quality_daily,02_clean/star_schema/fact_quality_daily.csv,product_id,string,Product identifier.,no,key/join
+fact_quality_daily,02_clean/star_schema/fact_quality_daily.csv,machine_id,string,Machine identifier.,no,key/join
+fact_quality_daily,02_clean/star_schema/fact_quality_daily.csv,inspection_count,numeric,Inspection count.,no,analysis/modeling
+fact_quality_daily,02_clean/star_schema/fact_quality_daily.csv,sample_size,string,Sample size.,no,analysis/modeling
+fact_quality_daily,02_clean/star_schema/fact_quality_daily.csv,defect_count,numeric,Defect count.,no,analysis/modeling
+fact_quality_daily,02_clean/star_schema/fact_quality_daily.csv,fail_count,numeric,Fail count.,no,analysis/modeling
+fact_quality_daily,02_clean/star_schema/fact_quality_daily.csv,defect_rate,numeric,Defective sample proportion.,no,analysis/modeling
+fact_sales,02_clean/star_schema/fact_sales.csv,invoice_id,string,Invoice id.,no,key/join
+fact_sales,02_clean/star_schema/fact_sales.csv,sales_order_id,string,Sales order id.,no,key/join
+fact_sales,02_clean/star_schema/fact_sales.csv,invoice_date,datetime,Invoice date.,no,analysis/modeling
+fact_sales,02_clean/star_schema/fact_sales.csv,customer_id,string,Customer identifier.,no,key/join
+fact_sales,02_clean/star_schema/fact_sales.csv,product_id,string,Product identifier.,no,key/join
+fact_sales,02_clean/star_schema/fact_sales.csv,quantity,numeric,Quantity.,no,analysis/modeling
+fact_sales,02_clean/star_schema/fact_sales.csv,gross_amount,numeric,Gross amount.,no,analysis/modeling
+fact_sales,02_clean/star_schema/fact_sales.csv,discount_amount,numeric,Discount amount.,no,analysis/modeling
+fact_sales,02_clean/star_schema/fact_sales.csv,net_amount,numeric,Net amount.,no,analysis/modeling
+fact_sales,02_clean/star_schema/fact_sales.csv,standard_cost,numeric,Standard cost.,no,analysis/modeling
+fact_sales,02_clean/star_schema/fact_sales.csv,margin_amount,numeric,Margin amount.,no,analysis/modeling
+fact_sales,02_clean/star_schema/fact_sales.csv,payment_status,string,Payment status.,no,analysis/modeling
+fact_shipment,02_clean/star_schema/fact_shipment.csv,shipment_id,string,Shipment id.,no,key/join
+fact_shipment,02_clean/star_schema/fact_shipment.csv,sales_order_id,string,Sales order id.,no,key/join
+fact_shipment,02_clean/star_schema/fact_shipment.csv,order_line_id,string,Order line id.,no,key/join
+fact_shipment,02_clean/star_schema/fact_shipment.csv,customer_id,string,Customer identifier.,no,key/join
+fact_shipment,02_clean/star_schema/fact_shipment.csv,product_id,string,Product identifier.,no,key/join
+fact_shipment,02_clean/star_schema/fact_shipment.csv,ship_date,datetime,Ship date.,no,analysis/modeling
+fact_shipment,02_clean/star_schema/fact_shipment.csv,promised_delivery_date,datetime,Promised delivery date.,no,analysis/modeling
+fact_shipment,02_clean/star_schema/fact_shipment.csv,shipped_quantity,numeric,Shipped quantity.,no,analysis/modeling
+fact_shipment,02_clean/star_schema/fact_shipment.csv,carrier,string,Carrier.,no,analysis/modeling
+fact_shipment,02_clean/star_schema/fact_shipment.csv,distance_km,string,Distance km.,no,analysis/modeling
+fact_shipment,02_clean/star_schema/fact_shipment.csv,late_delivery_flag,numeric,Binary target for late shipment.,no,analysis/modeling
+fact_shipment,02_clean/star_schema/fact_shipment.csv,delay_days,numeric,Delay days.,no,analysis/modeling
+fact_shipment,02_clean/star_schema/fact_shipment.csv,root_cause,string,Root cause.,no,analysis/modeling
+fact_shipment,02_clean/star_schema/fact_shipment.csv,source_system,string,Originating synthetic business system.,no,analysis/modeling
+machine_failure_features,03_features/machine_failure_features.csv,machine_id,string,Machine identifier.,no,key/join
+machine_failure_features,03_features/machine_failure_features.csv,plant_id,string,Plant identifier.,no,key/join
+machine_failure_features,03_features/machine_failure_features.csv,line_id,string,Production line identifier.,no,key/join
+machine_failure_features,03_features/machine_failure_features.csv,feature_date,datetime,Feature date.,no,analysis/modeling
+machine_failure_features,03_features/machine_failure_features.csv,avg_temperature_24h,numeric,Avg temperature 24h.,no,analysis/modeling
+machine_failure_features,03_features/machine_failure_features.csv,avg_vibration_24h,numeric,Avg vibration 24h.,no,analysis/modeling
+machine_failure_features,03_features/machine_failure_features.csv,max_vibration_24h,numeric,Max vibration 24h.,no,analysis/modeling
+machine_failure_features,03_features/machine_failure_features.csv,alarm_count_24h,numeric,Alarm count 24h.,no,analysis/modeling
+machine_failure_features,03_features/machine_failure_features.csv,downtime_count_7d,datetime,Downtime count 7d.,no,analysis/modeling
+machine_failure_features,03_features/machine_failure_features.csv,runtime_hours_since_maintenance,datetime,Runtime hours since maintenance.,no,analysis/modeling
+machine_failure_features,03_features/machine_failure_features.csv,machine_age_years,string,Machine age years.,no,analysis/modeling
+machine_failure_features,03_features/machine_failure_features.csv,maintenance_overdue_flag,numeric,Maintenance overdue flag.,no,analysis/modeling
+machine_failure_features,03_features/machine_failure_features.csv,failure_within_24h,string,Failure within 24h.,no,analysis/modeling
+machine_failure_features,03_features/machine_failure_features.csv,failure_within_7d,string,Binary target for machine failure within seven days.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,run_id,string,Production run identifier.,no,key/join
+quality_risk_features,03_features/quality_risk_features.csv,work_order_id,string,Manufacturing work order identifier.,no,key/join
+quality_risk_features,03_features/quality_risk_features.csv,plant_id,string,Plant identifier.,no,key/join
+quality_risk_features,03_features/quality_risk_features.csv,line_id,string,Production line identifier.,no,key/join
+quality_risk_features,03_features/quality_risk_features.csv,machine_id,string,Machine identifier.,no,key/join
+quality_risk_features,03_features/quality_risk_features.csv,product_id,string,Product identifier.,no,key/join
+quality_risk_features,03_features/quality_risk_features.csv,feature_date,datetime,Feature date.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,setup_minutes,numeric,Setup minutes.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,speed_ratio,numeric,Speed ratio.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,operator_experience_years,string,Operator experience years.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,operator_fairness_group,string,Operator fairness group.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,product_complexity_score,numeric,Product complexity score.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,supplier_quality_score,numeric,Supplier quality score.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,avg_temperature_24h,numeric,Avg temperature 24h.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,max_vibration_24h,numeric,Max vibration 24h.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,line_utilization_rate,numeric,Line utilization rate.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,previous_defect_rate_7d,numeric,Previous defect rate 7d.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,defect_rate,numeric,Defective sample proportion.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,high_defect_risk,string,Binary target for high defect risk.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,dominant_defect_code,string,Dominant defect code.,no,analysis/modeling
+quality_risk_features,03_features/quality_risk_features.csv,split,string,Split.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,run_id,string,Production run identifier.,no,key/join
+automl_modeling_table,03_features/automl_modeling_table.csv,work_order_id,string,Manufacturing work order identifier.,no,key/join
+automl_modeling_table,03_features/automl_modeling_table.csv,plant_id,string,Plant identifier.,no,key/join
+automl_modeling_table,03_features/automl_modeling_table.csv,line_id,string,Production line identifier.,no,key/join
+automl_modeling_table,03_features/automl_modeling_table.csv,machine_id,string,Machine identifier.,no,key/join
+automl_modeling_table,03_features/automl_modeling_table.csv,product_id,string,Product identifier.,no,key/join
+automl_modeling_table,03_features/automl_modeling_table.csv,feature_date,datetime,Feature date.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,setup_minutes,numeric,Setup minutes.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,speed_ratio,numeric,Speed ratio.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,operator_experience_years,string,Operator experience years.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,operator_fairness_group,string,Operator fairness group.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,product_complexity_score,numeric,Product complexity score.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,supplier_quality_score,numeric,Supplier quality score.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,avg_temperature_24h,numeric,Avg temperature 24h.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,max_vibration_24h,numeric,Max vibration 24h.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,line_utilization_rate,numeric,Line utilization rate.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,previous_defect_rate_7d,numeric,Previous defect rate 7d.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,defect_rate,numeric,Defective sample proportion.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,high_defect_risk,string,Binary target for high defect risk.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,dominant_defect_code,string,Dominant defect code.,no,analysis/modeling
+automl_modeling_table,03_features/automl_modeling_table.csv,split,string,Split.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,sales_order_id,string,Sales order id.,no,key/join
+delivery_risk_features,03_features/delivery_risk_features.csv,customer_id,string,Customer identifier.,no,key/join
+delivery_risk_features,03_features/delivery_risk_features.csv,product_id,string,Product identifier.,no,key/join
+delivery_risk_features,03_features/delivery_risk_features.csv,order_date,datetime,Order date.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,order_lead_time_days,datetime,Order lead time days.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,ordered_quantity,numeric,Ordered quantity.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,customer_priority,string,Customer priority.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,supplier_risk_rating,string,Supplier risk rating.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,material_shortage_flag,numeric,Material shortage flag.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,planned_capacity_utilization,string,Planned capacity utilization.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,historical_late_rate_customer,numeric,Historical late rate customer.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,production_delay_days,numeric,Production delay days.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,quality_hold_flag,numeric,Quality hold flag.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,shipment_distance_km,string,Shipment distance km.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,late_delivery_flag,numeric,Binary target for late shipment.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,delay_days,numeric,Delay days.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,root_cause,string,Root cause.,no,analysis/modeling
+delivery_risk_features,03_features/delivery_risk_features.csv,split,string,Split.,no,analysis/modeling
+demand_forecast_daily,03_features/demand_forecast_daily.csv,date,datetime,Date.,no,analysis/modeling
+demand_forecast_daily,03_features/demand_forecast_daily.csv,product_id,string,Product identifier.,no,key/join
+demand_forecast_daily,03_features/demand_forecast_daily.csv,product_family,string,Product family.,no,analysis/modeling
+demand_forecast_daily,03_features/demand_forecast_daily.csv,actual_order_quantity,numeric,Actual order quantity.,no,analysis/modeling
+demand_forecast_daily,03_features/demand_forecast_daily.csv,promotion_flag,numeric,Promotion flag.,no,analysis/modeling
+demand_forecast_daily,03_features/demand_forecast_daily.csv,holiday_flag,numeric,Holiday flag.,no,analysis/modeling
+demand_forecast_daily,03_features/demand_forecast_daily.csv,season_index,string,Season index.,no,analysis/modeling
+demand_forecast_daily,03_features/demand_forecast_daily.csv,price_index,string,Price index.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,date,datetime,Date.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,plant_id,string,Plant identifier.,no,key/join
+oee_daily_line,03_features/oee_daily_line.csv,line_id,string,Production line identifier.,no,key/join
+oee_daily_line,03_features/oee_daily_line.csv,planned_quantity,numeric,Planned quantity.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,good_quantity,numeric,Good quantity.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,scrap_quantity,numeric,Scrap quantity.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,rework_quantity,numeric,Rework quantity.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,runtime_minutes,datetime,Runtime minutes.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,downtime_minutes,datetime,Downtime minutes.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,energy_kwh,numeric,Energy kwh.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,availability,string,Availability.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,performance,string,Performance.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,quality,string,Quality.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,oee,numeric,Oee.,no,analysis/modeling
+oee_daily_line,03_features/oee_daily_line.csv,energy_intensity_kwh_per_good_unit,numeric,Energy intensity kwh per good unit.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,run_id,string,Production run identifier.,no,key/join
+monitoring_reference,03_features/monitoring_reference.csv,work_order_id,string,Manufacturing work order identifier.,no,key/join
+monitoring_reference,03_features/monitoring_reference.csv,plant_id,string,Plant identifier.,no,key/join
+monitoring_reference,03_features/monitoring_reference.csv,line_id,string,Production line identifier.,no,key/join
+monitoring_reference,03_features/monitoring_reference.csv,machine_id,string,Machine identifier.,no,key/join
+monitoring_reference,03_features/monitoring_reference.csv,product_id,string,Product identifier.,no,key/join
+monitoring_reference,03_features/monitoring_reference.csv,feature_date,datetime,Feature date.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,setup_minutes,numeric,Setup minutes.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,speed_ratio,numeric,Speed ratio.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,operator_experience_years,string,Operator experience years.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,operator_fairness_group,string,Operator fairness group.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,product_complexity_score,numeric,Product complexity score.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,supplier_quality_score,numeric,Supplier quality score.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,avg_temperature_24h,numeric,Avg temperature 24h.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,max_vibration_24h,numeric,Max vibration 24h.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,line_utilization_rate,numeric,Line utilization rate.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,previous_defect_rate_7d,numeric,Previous defect rate 7d.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,defect_rate,numeric,Defective sample proportion.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,high_defect_risk,string,Binary target for high defect risk.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,dominant_defect_code,string,Dominant defect code.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,split,string,Split.,no,analysis/modeling
+monitoring_reference,03_features/monitoring_reference.csv,monitoring_window,string,Monitoring window.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,run_id,string,Production run identifier.,no,key/join
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,work_order_id,string,Manufacturing work order identifier.,no,key/join
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,plant_id,string,Plant identifier.,no,key/join
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,line_id,string,Production line identifier.,no,key/join
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,machine_id,string,Machine identifier.,no,key/join
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,product_id,string,Product identifier.,no,key/join
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,feature_date,datetime,Feature date.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,setup_minutes,numeric,Setup minutes.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,speed_ratio,numeric,Speed ratio.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,operator_experience_years,string,Operator experience years.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,operator_fairness_group,string,Operator fairness group.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,product_complexity_score,numeric,Product complexity score.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,supplier_quality_score,numeric,Supplier quality score.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,avg_temperature_24h,numeric,Avg temperature 24h.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,max_vibration_24h,numeric,Max vibration 24h.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,line_utilization_rate,numeric,Line utilization rate.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,previous_defect_rate_7d,numeric,Previous defect rate 7d.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,defect_rate,numeric,Defective sample proportion.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,high_defect_risk,string,Binary target for high defect risk.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,dominant_defect_code,string,Dominant defect code.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,split,string,Split.,no,analysis/modeling
+monitoring_current_drifted,03_features/monitoring_current_drifted.csv,monitoring_window,string,Monitoring window.,no,analysis/modeling
+responsible_ai_fairness_case,03_features/responsible_ai_fairness_case.csv,case_id,string,Case id.,no,key/join
+responsible_ai_fairness_case,03_features/responsible_ai_fairness_case.csv,run_id,string,Production run identifier.,no,key/join
+responsible_ai_fairness_case,03_features/responsible_ai_fairness_case.csv,operator_fairness_group,string,Operator fairness group.,no,analysis/modeling
+responsible_ai_fairness_case,03_features/responsible_ai_fairness_case.csv,true_high_defect_risk,string,True high defect risk.,no,analysis/modeling
+responsible_ai_fairness_case,03_features/responsible_ai_fairness_case.csv,model_score_unmitigated,numeric,Model score unmitigated.,no,analysis/modeling
+responsible_ai_fairness_case,03_features/responsible_ai_fairness_case.csv,model_score_mitigated,numeric,Model score mitigated.,no,analysis/modeling
+responsible_ai_fairness_case,03_features/responsible_ai_fairness_case.csv,prediction_threshold,string,Prediction threshold.,no,analysis/modeling
+responsible_ai_fairness_case,03_features/responsible_ai_fairness_case.csv,human_review_required,string,Human review required.,no,analysis/modeling
+graph_nodes,03_features/graph_nodes.csv,node_id,string,Node id.,no,key/join
+graph_nodes,03_features/graph_nodes.csv,node_type,string,Node type.,no,analysis/modeling
+graph_nodes,03_features/graph_nodes.csv,plant_id,string,Plant identifier.,no,key/join
+graph_nodes,03_features/graph_nodes.csv,line_id,string,Production line identifier.,no,key/join
+graph_nodes,03_features/graph_nodes.csv,feature_value,string,Feature value.,no,analysis/modeling
+graph_edges_machine_product_supplier,03_features/graph_edges_machine_product_supplier.csv,source_id,string,Source id.,no,key/join
+graph_edges_machine_product_supplier,03_features/graph_edges_machine_product_supplier.csv,target_id,string,Target id.,no,key/join
+graph_edges_machine_product_supplier,03_features/graph_edges_machine_product_supplier.csv,edge_type,string,Edge type.,no,analysis/modeling
+graph_edges_machine_product_supplier,03_features/graph_edges_machine_product_supplier.csv,weight,string,Weight.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,run_id,string,Production run identifier.,no,key/join
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,work_order_id,string,Manufacturing work order identifier.,no,key/join
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,plant_id,string,Plant identifier.,no,key/join
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,line_id,string,Production line identifier.,no,key/join
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,machine_id,string,Machine identifier.,no,key/join
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,product_id,string,Product identifier.,no,key/join
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,feature_date,datetime,Feature date.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,setup_minutes,numeric,Setup minutes.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,speed_ratio,numeric,Speed ratio.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,operator_experience_years,string,Operator experience years.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,operator_fairness_group,string,Operator fairness group.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,product_complexity_score,numeric,Product complexity score.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,supplier_quality_score,numeric,Supplier quality score.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,avg_temperature_24h,numeric,Avg temperature 24h.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,max_vibration_24h,numeric,Max vibration 24h.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,line_utilization_rate,numeric,Line utilization rate.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,previous_defect_rate_7d,numeric,Previous defect rate 7d.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,defect_rate,numeric,Defective sample proportion.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,high_defect_risk,string,Binary target for high defect risk.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,dominant_defect_code,string,Dominant defect code.,no,analysis/modeling
+P01_quality_client,03_features/federated_learning/P01_quality_client.csv,split,string,Split.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,run_id,string,Production run identifier.,no,key/join
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,work_order_id,string,Manufacturing work order identifier.,no,key/join
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,plant_id,string,Plant identifier.,no,key/join
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,line_id,string,Production line identifier.,no,key/join
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,machine_id,string,Machine identifier.,no,key/join
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,product_id,string,Product identifier.,no,key/join
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,feature_date,datetime,Feature date.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,setup_minutes,numeric,Setup minutes.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,speed_ratio,numeric,Speed ratio.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,operator_experience_years,string,Operator experience years.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,operator_fairness_group,string,Operator fairness group.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,product_complexity_score,numeric,Product complexity score.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,supplier_quality_score,numeric,Supplier quality score.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,avg_temperature_24h,numeric,Avg temperature 24h.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,max_vibration_24h,numeric,Max vibration 24h.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,line_utilization_rate,numeric,Line utilization rate.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,previous_defect_rate_7d,numeric,Previous defect rate 7d.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,defect_rate,numeric,Defective sample proportion.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,high_defect_risk,string,Binary target for high defect risk.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,dominant_defect_code,string,Dominant defect code.,no,analysis/modeling
+P02_quality_client,03_features/federated_learning/P02_quality_client.csv,split,string,Split.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,run_id,string,Production run identifier.,no,key/join
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,work_order_id,string,Manufacturing work order identifier.,no,key/join
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,plant_id,string,Plant identifier.,no,key/join
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,line_id,string,Production line identifier.,no,key/join
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,machine_id,string,Machine identifier.,no,key/join
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,product_id,string,Product identifier.,no,key/join
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,feature_date,datetime,Feature date.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,setup_minutes,numeric,Setup minutes.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,speed_ratio,numeric,Speed ratio.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,operator_experience_years,string,Operator experience years.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,operator_fairness_group,string,Operator fairness group.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,product_complexity_score,numeric,Product complexity score.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,supplier_quality_score,numeric,Supplier quality score.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,avg_temperature_24h,numeric,Avg temperature 24h.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,max_vibration_24h,numeric,Max vibration 24h.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,line_utilization_rate,numeric,Line utilization rate.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,previous_defect_rate_7d,numeric,Previous defect rate 7d.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,defect_rate,numeric,Defective sample proportion.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,high_defect_risk,string,Binary target for high defect risk.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,dominant_defect_code,string,Dominant defect code.,no,analysis/modeling
+P03_quality_client,03_features/federated_learning/P03_quality_client.csv,split,string,Split.,no,analysis/modeling
+machine_failure_label,04_model_targets/machine_failure_label.csv,machine_id,string,Machine identifier.,no,key/join
+machine_failure_label,04_model_targets/machine_failure_label.csv,prediction_datetime,datetime,Prediction datetime.,no,analysis/modeling
+machine_failure_label,04_model_targets/machine_failure_label.csv,failure_within_24h,string,Failure within 24h.,no,analysis/modeling
+machine_failure_label,04_model_targets/machine_failure_label.csv,failure_within_7d,string,Binary target for machine failure within seven days.,no,analysis/modeling
+machine_failure_label,04_model_targets/machine_failure_label.csv,failure_type,string,Failure type.,no,analysis/modeling
+machine_failure_label,04_model_targets/machine_failure_label.csv,severity,string,Severity.,no,analysis/modeling
+quality_risk_label,04_model_targets/quality_risk_label.csv,run_id,string,Production run identifier.,no,key/join
+quality_risk_label,04_model_targets/quality_risk_label.csv,defect_rate,numeric,Defective sample proportion.,no,analysis/modeling
+quality_risk_label,04_model_targets/quality_risk_label.csv,high_defect_risk,string,Binary target for high defect risk.,no,analysis/modeling
+quality_risk_label,04_model_targets/quality_risk_label.csv,dominant_defect_code,string,Dominant defect code.,no,analysis/modeling
+quality_risk_label,04_model_targets/quality_risk_label.csv,risk_prob,string,Risk prob.,no,analysis/modeling
+delivery_risk_label,04_model_targets/delivery_risk_label.csv,sales_order_id,string,Sales order id.,no,key/join
+delivery_risk_label,04_model_targets/delivery_risk_label.csv,late_delivery_flag,numeric,Binary target for late shipment.,no,analysis/modeling
+delivery_risk_label,04_model_targets/delivery_risk_label.csv,delay_days,numeric,Delay days.,no,analysis/modeling
+delivery_risk_label,04_model_targets/delivery_risk_label.csv,root_cause,string,Root cause.,no,analysis/modeling
+delivery_risk_label,04_model_targets/delivery_risk_label.csv,material_shortage_flag,numeric,Material shortage flag.,no,analysis/modeling
+delivery_risk_label,04_model_targets/delivery_risk_label.csv,quality_hold_flag,numeric,Quality hold flag.,no,analysis/modeling
+delivery_risk_label,04_model_targets/delivery_risk_label.csv,production_delay_days,numeric,Production delay days.,no,analysis/modeling
+data_quality_issues_ground_truth,04_model_targets/data_quality_issues_ground_truth.csv,table_name,string,Table name.,no,analysis/modeling
+data_quality_issues_ground_truth,04_model_targets/data_quality_issues_ground_truth.csv,business_key,string,Business key.,no,analysis/modeling
+data_quality_issues_ground_truth,04_model_targets/data_quality_issues_ground_truth.csv,issue_type,string,Issue type.,no,analysis/modeling
+data_quality_issues_ground_truth,04_model_targets/data_quality_issues_ground_truth.csv,severity,string,Severity.,no,analysis/modeling
+data_quality_issues_ground_truth,04_model_targets/data_quality_issues_ground_truth.csv,description,string,Description.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,date,datetime,Date.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,plant_id,string,Plant identifier.,no,key/join
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,line_id,string,Production line identifier.,no,key/join
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,planned_quantity,numeric,Planned quantity.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,good_quantity,numeric,Good quantity.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,scrap_quantity,numeric,Scrap quantity.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,rework_quantity,numeric,Rework quantity.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,runtime_minutes,datetime,Runtime minutes.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,downtime_minutes,datetime,Downtime minutes.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,energy_kwh,numeric,Energy kwh.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,availability,string,Availability.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,performance,string,Performance.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,quality,string,Quality.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,oee,numeric,Oee.,no,analysis/modeling
+oee_summary_by_line,05_dashboard/oee_summary_by_line.csv,energy_intensity_kwh_per_good_unit,numeric,Energy intensity kwh per good unit.,no,analysis/modeling
+plant_performance_summary,05_dashboard/plant_performance_summary.csv,plant_id,string,Plant identifier.,no,key/join
+plant_performance_summary,05_dashboard/plant_performance_summary.csv,plant_name,string,Plant name.,no,analysis/modeling
+plant_performance_summary,05_dashboard/plant_performance_summary.csv,avg_oee,numeric,Avg oee.,no,analysis/modeling
+plant_performance_summary,05_dashboard/plant_performance_summary.csv,total_good_quantity,numeric,Total good quantity.,no,analysis/modeling
+plant_performance_summary,05_dashboard/plant_performance_summary.csv,total_scrap_quantity,numeric,Total scrap quantity.,no,analysis/modeling
+plant_performance_summary,05_dashboard/plant_performance_summary.csv,total_downtime_minutes,datetime,Total downtime minutes.,no,analysis/modeling
+plant_performance_summary,05_dashboard/plant_performance_summary.csv,avg_energy_intensity,string,Avg energy intensity.,no,analysis/modeling
+quality_defect_pareto,05_dashboard/quality_defect_pareto.csv,defect_code,string,Defect code.,no,analysis/modeling
+quality_defect_pareto,05_dashboard/quality_defect_pareto.csv,defect_count,numeric,Defect count.,no,analysis/modeling
+quality_defect_pareto,05_dashboard/quality_defect_pareto.csv,defect_pct,numeric,Defect pct.,no,analysis/modeling
+quality_defect_pareto,05_dashboard/quality_defect_pareto.csv,cum_pct,numeric,Cum pct.,no,analysis/modeling
+delivery_risk_summary,05_dashboard/delivery_risk_summary.csv,root_cause,string,Root cause.,no,analysis/modeling
+delivery_risk_summary,05_dashboard/delivery_risk_summary.csv,count,numeric,Count.,no,analysis/modeling
+assignment2_iot_agentic_ai_tasks,06_labs/assignment2_iot_agentic_ai_tasks.csv,task_id,string,Task id.,no,key/join
+assignment2_iot_agentic_ai_tasks,06_labs/assignment2_iot_agentic_ai_tasks.csv,role,string,Role.,no,analysis/modeling
+assignment2_iot_agentic_ai_tasks,06_labs/assignment2_iot_agentic_ai_tasks.csv,objective,string,Objective.,no,analysis/modeling
+assignment2_iot_agentic_ai_tasks,06_labs/assignment2_iot_agentic_ai_tasks.csv,input_files,string,Input files.,no,analysis/modeling
+assignment2_iot_agentic_ai_tasks,06_labs/assignment2_iot_agentic_ai_tasks.csv,expected_output,string,Expected output.,no,analysis/modeling
+lab_support_index,06_labs/lab_support_index.csv,week,string,Week.,no,analysis/modeling
+lab_support_index,06_labs/lab_support_index.csv,lecture,string,Lecture.,no,analysis/modeling
+lab_support_index,06_labs/lab_support_index.csv,obe03_activity,string,Obe03 activity.,no,analysis/modeling
+lab_support_index,06_labs/lab_support_index.csv,dataset_support,string,Dataset support.,no,analysis/modeling
+lab_support_index,06_labs/lab_support_index.csv,key_files,string,Key files.,no,analysis/modeling
+lab_support_index,06_labs/lab_support_index.csv,student_output,string,Student output.,no,analysis/modeling
+research_mapping_cases,06_labs/research_mapping_cases.csv,case_id,string,Case id.,no,key/join
+research_mapping_cases,06_labs/research_mapping_cases.csv,topic,string,Topic.,no,analysis/modeling
+research_mapping_cases,06_labs/research_mapping_cases.csv,research_question,string,Research question.,no,analysis/modeling
+research_mapping_cases,06_labs/research_mapping_cases.csv,dataset_files,string,Dataset files.,no,analysis/modeling
+research_mapping_cases,06_labs/research_mapping_cases.csv,possible_methods,string,Possible methods.,no,analysis/modeling
+research_mapping_cases,06_labs/research_mapping_cases.csv,expected_metric,string,Expected metric.,no,analysis/modeling
+assignment1_synthetic_data_case,06_labs/assignment1_synthetic_data_case.csv,task_id,string,Task id.,no,key/join
+assignment1_synthetic_data_case,06_labs/assignment1_synthetic_data_case.csv,requirement,string,Requirement.,no,analysis/modeling
+assignment1_synthetic_data_case,06_labs/assignment1_synthetic_data_case.csv,evaluation_focus,string,Evaluation focus.,no,analysis/modeling
+midterm_dataset_review_questions,06_labs/midterm_dataset_review_questions.csv,question_id,string,Question id.,no,key/join
+midterm_dataset_review_questions,06_labs/midterm_dataset_review_questions.csv,question,string,Question.,no,analysis/modeling
+midterm_dataset_review_questions,06_labs/midterm_dataset_review_questions.csv,related_files,string,Related files.,no,analysis/modeling
+final_integrative_case_questions,06_labs/final_integrative_case_questions.csv,question_id,string,Question id.,no,key/join
+final_integrative_case_questions,06_labs/final_integrative_case_questions.csv,question,string,Question.,no,analysis/modeling
+final_integrative_case_questions,06_labs/final_integrative_case_questions.csv,related_files,string,Related files.,no,analysis/modeling

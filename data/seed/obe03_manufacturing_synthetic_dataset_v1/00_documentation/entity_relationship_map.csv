@@ -1,0 +1,12 @@
+from_table,from_key,to_table,to_key,relationship
+plant_master,plant_id,line_master,plant_id,one-to-many
+line_master,line_id,machine_master,line_id,one-to-many
+product_master,product_id,sales_order,product_id,one-to-many
+sales_order,sales_order_id,work_order,sales_order_id,one-to-many optional
+work_order,work_order_id,production_run,work_order_id,one-to-many
+production_run,run_id,quality_inspection,run_id,one-to-one or one-to-many
+machine_master,machine_id,sensor_reading,machine_id,one-to-many time-series
+machine_master,machine_id,maintenance_log,machine_id,one-to-many
+sales_order,sales_order_id,shipment,sales_order_id,one-to-many
+shipment,shipment_id,customer_complaint,shipment_id,zero-to-many
+supply_chain_transaction,transaction_hash,supply_chain_transaction,previous_hash,hash-chain self-link

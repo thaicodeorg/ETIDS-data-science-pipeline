@@ -8,7 +8,7 @@ Use Airflow to run the Lecture 3 and Lecture 4 data pipeline as a controlled wor
 
 1. Open Airflow at <http://localhost:8080>.
 2. Login with `admin / admin`.
-3. Open DAG `obe03_l3_l4_manufacturing_pipeline`.
+3. Open DAG `etids_l3_l4_manufacturing_pipeline`.
 4. Trigger the DAG manually.
 5. Inspect each task log.
 6. Open FastAPI at <http://localhost:8000/docs> and compare API outputs.

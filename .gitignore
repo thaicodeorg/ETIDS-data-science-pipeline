@@ -1,12 +1,37 @@
+# Environment and secrets
 .env
+.env.*
+!.env.example
+
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+
+# Node / Next.js
 node_modules/
 .next/
+out/
+.npm/
+
+# Docker / local runtime data
+airflow/logs/
+airflow/plugins/__pycache__/
 postgres_data/
 superset_home/
-airflow/logs/*
-!airflow/logs/.gitkeep
-airflow/airflow.db
-data/seed/obe03_manufacturing_synthetic_dataset_v1/
+*.db
+*.sqlite
+*.sqlite3
+
+# OS and editor files
 .DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log

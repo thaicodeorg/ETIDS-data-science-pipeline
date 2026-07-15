@@ -1,0 +1,5 @@
+task_id,role,objective,input_files,expected_output
+AGT-001,data_quality_agent,Detect invalid quantities and missing downtime reasons before KPI calculation.,work_order.csv; machine_state_event.csv; data_quality_rules.csv,exception register and recommended cleaning action
+AGT-002,maintenance_agent,Prioritize machines for inspection based on failure risk features and alarm stream.,machine_failure_features.csv; alarm_event.csv; maintenance_log.csv,ranked maintenance watchlist
+AGT-003,quality_agent,Explain high defect risk runs using SHAP-style feature evidence.,quality_risk_features.csv; quality_inspection.csv,root cause memo
+AGT-004,supply_chain_agent,Trace material lots through blockchain transactions and quality results.,supply_chain_transaction.csv; smart_contract_event.csv; quality_inspection.csv,traceability report

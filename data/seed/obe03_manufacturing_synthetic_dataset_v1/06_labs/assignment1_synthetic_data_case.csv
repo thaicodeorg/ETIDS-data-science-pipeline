@@ -1,0 +1,4 @@
+task_id,requirement,evaluation_focus
+A1-01,Profile raw quality_risk_features and generate a CTGAN-like synthetic sample or documented prompt-based synthetic extension.,"privacy, utility, distribution comparison, ethical risk"
+A1-02,"Compare real-synthetic distributions for defect_rate, speed_ratio, supplier_quality_score, and operator_fairness_group.","data fidelity, minority group coverage, disclosure risk"
+A1-03,Write a short reflection on when synthetic industrial data is useful and when it can mislead decision makers.,"ethics, IP, bias, auditability"

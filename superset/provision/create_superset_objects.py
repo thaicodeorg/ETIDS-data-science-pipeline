@@ -54,7 +54,7 @@ def get_or_create_dataset(database: Database, table_name: str, schema: str, colu
     existing_metrics = {m.metric_name for m in dataset.metrics or []}
     for name, expr in metrics.items():
         if name not in existing_metrics:
-            db.session.add(SqlMetric(table=dataset, metric_name=name, expression=expr, description=f"OBE03 metric: {name}"))
+            db.session.add(SqlMetric(table=dataset, metric_name=name, expression=expr, description=f"ETIDS metric: {name}"))
     db.session.commit()
     return dataset
 

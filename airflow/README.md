@@ -2,7 +2,7 @@
 
 Open Airflow at <http://localhost:8080> and trigger:
 
-`obe03_l3_l4_manufacturing_pipeline`
+`etids_l3_l4_manufacturing_pipeline`
 
 The DAG implements the requested flow:
 

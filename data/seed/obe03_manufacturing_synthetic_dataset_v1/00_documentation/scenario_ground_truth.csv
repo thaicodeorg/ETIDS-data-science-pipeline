@@ -1,0 +1,9 @@
+scenario_id,scenario_name,affected_files,ground_truth_signal,lecture_support
+S01,Bearing failure preceded by vibration growth,sensor_reading.csv; alarm_event.csv; maintenance_log.csv; machine_failure_features.csv,failure_within_7d=1 with rising max_vibration_24h,"L5,L9,L14"
+S02,Supplier material issue increases defects,supplier_master.csv; production_run.csv; quality_inspection.csv; quality_risk_features.csv,supplier_id=SUP-001 during 2025-12-09 to 2025-12-30,"L3,L5,L11,L15"
+S03,Urgent order creates speed loss and scrap risk,sales_order.csv; work_order.csv; production_run.csv; quality_inspection.csv,priority_level=urgent and speed_ratio>1.05,"L3,L4,L5"
+S04,SCADA gateway duplicate/missing records,sensor_reading.csv; data_quality_issues_ground_truth.csv,data_quality_flag in missing/spike and exact_duplicate issue rows,"L3,L13,L14"
+S05,Duplicate MES work-order export,work_order.csv; data_quality_issues_ground_truth.csv,duplicate_business_key for work_order_id,"L3,L11"
+S06,Concept drift after product mix change,monitoring_reference.csv; monitoring_current_drifted.csv,current window has higher speed_ratio and lower supplier_quality_score,L9
+S07,Fairness risk in quality risk model,responsible_ai_fairness_case.csv,unmitigated model_score is shifted for junior operator group,L11
+S08,Blockchain traceability and audit flag,supply_chain_transaction.csv; smart_contract_event.csv,audit_flag=1 and linked transaction_hash chain,L15

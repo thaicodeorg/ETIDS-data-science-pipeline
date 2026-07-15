@@ -19,7 +19,7 @@ Apache Superset
 
 ## 1. Raw data
 
-The raw data layer uses the OBE03 manufacturing synthetic dataset. It contains ERP, MES, SCADA, QMS, CMMS, logistics, and master-data files.
+The raw data layer uses the ETIDS manufacturing synthetic dataset. It contains ERP, MES, SCADA, QMS, CMMS, logistics, and master-data files.
 
 The raw layer is intentionally messy. It supports Lecture 3 topics such as missing values, duplicates, invalid values, wrong data types, noisy sensor values, and inconsistent timestamps.
 

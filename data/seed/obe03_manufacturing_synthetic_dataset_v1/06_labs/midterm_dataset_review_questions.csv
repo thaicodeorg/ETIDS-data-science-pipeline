@@ -1,0 +1,4 @@
+question_id,question,related_files
+M-01,Identify three raw data quality problems and propose controls before OEE calculation.,work_order.csv; sensor_reading.csv; data_quality_rules.csv
+M-02,Design features for predicting high defect risk and explain expected causal limits.,quality_risk_features.csv
+M-03,Sketch a dashboard for plant managers and justify chart choices.,oee_summary_by_line.csv; quality_defect_pareto.csv

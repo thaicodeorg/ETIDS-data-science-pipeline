@@ -1,0 +1,12 @@
+# Keep text normalized across Windows/macOS/Linux
+* text=auto
+
+# Preserve binary artifacts
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.xlsx binary

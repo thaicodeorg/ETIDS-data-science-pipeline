@@ -1,0 +1,4 @@
+client_id,plant_id,sample_count,federated_learning_use
+client_P01,P01,3802,horizontal_FL_quality_prediction
+client_P02,P02,3818,horizontal_FL_quality_prediction
+client_P03,P03,3790,horizontal_FL_quality_prediction

@@ -70,7 +70,7 @@ export default function Page() {
   return (
     <main>
       <section className="hero">
-        <span className="badge">OBE03 · Lectures 3–4</span>
+        <span className="badge">ETIDS · Lectures 3–4</span>
         <h1>Manufacturing Data Science Pipeline</h1>
         <p>
           Control a local Docker-based pipeline: ingest raw manufacturing data, clean and validate it,
