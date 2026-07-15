@@ -1,0 +1,74 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --ink: #102033;
+  --muted: #5d6b7a;
+  --line: #d9e2ec;
+  --accent: #1769aa;
+  --accent2: #0f9aa6;
+  --warn: #d97706;
+  --bad: #b91c1c;
+  --good: #15803d;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+main { max-width: 1180px; margin: 0 auto; padding: 32px 20px 60px; }
+.hero {
+  background: linear-gradient(135deg, #102033 0%, #174a73 60%, #0f9aa6 100%);
+  color: white;
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(16, 32, 51, 0.22);
+}
+.hero h1 { margin: 0 0 12px; font-size: 36px; line-height: 1.1; }
+.hero p { margin: 0; max-width: 850px; color: #e6eef6; font-size: 17px; }
+.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 22px rgba(16, 32, 51, 0.06);
+}
+.card h2, .card h3 { margin-top: 0; }
+.card p { color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0; }
+button, .linkButton {
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 16px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+button.secondary { background: var(--accent2); }
+button.warning { background: var(--warn); }
+button:disabled { opacity: 0.6; cursor: wait; }
+pre {
+  background: #0b1728;
+  color: #e6eef6;
+  border-radius: 16px;
+  padding: 16px;
+  overflow-x: auto;
+  max-height: 360px;
+}
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; font-size: 14px; }
+th { color: var(--muted); }
+.kpi { font-size: 30px; font-weight: 800; }
+.kpiLabel { color: var(--muted); font-size: 13px; }
+.badge { display: inline-block; border-radius: 999px; padding: 4px 10px; background: #e8f1f8; color: var(--accent); font-size: 12px; font-weight: 700; }
+.twoCol { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+@media (max-width: 920px) { .grid { grid-template-columns: repeat(2, 1fr); } .twoCol { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } .hero h1 { font-size: 28px; } }

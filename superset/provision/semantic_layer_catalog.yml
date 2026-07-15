@@ -1,0 +1,70 @@
+database: ManufacturingDW
+connection_uri_hint: postgresql+psycopg2://manufacturing:manufacturing@postgres:5432/manufacturing_dw
+semantic_flow:
+  - Raw data
+  - ETL / ELT Layer: Python, Pandas, Airflow
+  - Data Warehouse / Data Mart: PostgreSQL
+  - Apache Superset: Dataset, Metric Layer, Chart, Dashboard, Role-based Access / Row-level Security
+
+datasets:
+  - name: OEE operational dataset
+    schema: mart
+    table_or_view: v_dataset_oee_operational
+    time_column: production_date
+    dimensions: [plant_id, line_id]
+    metrics:
+      - {name: avg_oee, expression: AVG(oee), unit: percent}
+      - {name: avg_availability, expression: AVG(availability), unit: percent}
+      - {name: avg_performance, expression: AVG(performance), unit: percent}
+      - {name: avg_quality, expression: AVG(quality), unit: percent}
+      - {name: total_output_quantity, expression: SUM(output_quantity), unit: units}
+      - {name: scrap_rate, expression: SUM(scrap_quantity) / NULLIF(SUM(output_quantity), 0), unit: percent}
+  - name: Quality decision dataset
+    schema: mart
+    table_or_view: v_dataset_quality_decision
+    time_column: inspection_date
+    dimensions: [plant_id, line_id, product_family, defect_code]
+    metrics:
+      - {name: defect_rate, expression: SUM(defect_count) / NULLIF(SUM(sample_size), 0), unit: percent}
+      - {name: defect_count, expression: SUM(defect_count), unit: count}
+      - {name: high_defect_risk_rate, expression: AVG(high_defect_risk_rate), unit: percent}
+  - name: Sensor hourly dataset
+    schema: mart
+    table_or_view: v_dataset_sensor_hourly
+    time_column: sensor_hour
+    dimensions: [plant_id, line_id, machine_id]
+    metrics:
+      - {name: avg_temperature_c, expression: AVG(avg_temperature_c), unit: celsius}
+      - {name: max_vibration_mm_s, expression: MAX(max_vibration_mm_s), unit: mm/s}
+  - name: Data quality governance dataset
+    schema: mart
+    table_or_view: v_dataset_dq_governance
+    dimensions: [severity, rule_id, table_name]
+    metrics:
+      - {name: dq_issue_count, expression: SUM(issue_count), unit: count}
+
+charts:
+  - {name: KPI - Average OEE, dataset: OEE operational dataset, viz_type: big_number_total, metric: avg_oee}
+  - {name: Trend - OEE by production date, dataset: OEE operational dataset, viz_type: echarts_timeseries_line, metric: avg_oee}
+  - {name: Bar - OEE by plant and line, dataset: OEE operational dataset, viz_type: echarts_bar, metric: avg_oee}
+  - {name: Pareto - Defect count by defect code, dataset: Quality decision dataset, viz_type: echarts_bar, metric: defect_count}
+  - {name: Bar - Data quality issues by severity, dataset: Data quality governance dataset, viz_type: echarts_bar, metric: dq_issue_count}
+  - {name: Trend - Sensor vibration by hour, dataset: Sensor hourly dataset, viz_type: echarts_timeseries_line, metric: max_vibration_mm_s}
+
+dashboards:
+  - name: Manufacturing Decision Dashboard
+    charts:
+      - KPI - Average OEE
+      - Trend - OEE by production date
+      - Bar - OEE by plant and line
+      - Pareto - Defect count by defect code
+      - Bar - Data quality issues by severity
+      - Trend - Sensor vibration by hour
+
+rls_policies:
+  - name: RLS - Plant scoped access
+    datasets:
+      - OEE operational dataset
+      - Quality decision dataset
+      - Sensor hourly dataset
+    clause: "plant_id IN (SELECT plant_id FROM mart.superset_rls_user_plant WHERE username = '{{ current_username() }}')"

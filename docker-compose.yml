@@ -1,0 +1,109 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: obe03-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-manufacturing_dw}
+      POSTGRES_USER: ${POSTGRES_USER:-manufacturing}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-manufacturing}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-manufacturing} -d ${POSTGRES_DB:-manufacturing_dw}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+    container_name: obe03-backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-manufacturing}:${POSTGRES_PASSWORD:-manufacturing}@postgres:5432/${POSTGRES_DB:-manufacturing_dw}
+      DATA_ZIP_PATH: /app/data/seed/obe03_manufacturing_synthetic_dataset_v1.zip
+      DATA_EXTRACT_DIR: /app/data/seed
+      SENSOR_ROW_LIMIT: ${SENSOR_ROW_LIMIT:-200000}
+      CORS_ORIGINS: http://localhost:${FRONTEND_PORT:-3000},http://127.0.0.1:${FRONTEND_PORT:-3000}
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  airflow:
+    image: apache/airflow:2.10.5-python3.11
+    container_name: obe03-airflow
+    restart: unless-stopped
+    user: "${AIRFLOW_UID:-50000}:0"
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "true"
+      AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW_SECRET_KEY:-obe03-airflow-secret-key-change-me}
+      AIRFLOW_WWW_USER_USERNAME: ${AIRFLOW_ADMIN_USERNAME:-admin}
+      AIRFLOW_WWW_USER_PASSWORD: ${AIRFLOW_ADMIN_PASSWORD:-admin}
+      BACKEND_API_BASE_URL: http://backend:8000
+    ports:
+      - "${AIRFLOW_PORT:-8080}:8080"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+    command: >
+      bash -c 'set -e;
+      airflow db migrate;
+      (airflow users create --username "$${AIRFLOW_WWW_USER_USERNAME:-admin}" --password "$${AIRFLOW_WWW_USER_PASSWORD:-admin}" --firstname OBE03 --lastname Admin --role Admin --email admin@example.com || airflow users reset-password -u "$${AIRFLOW_WWW_USER_USERNAME:-admin}" -p "$${AIRFLOW_WWW_USER_PASSWORD:-admin}");
+      airflow scheduler &
+      exec airflow webserver --port 8080 --hostname 0.0.0.0'
+    depends_on:
+      - backend
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: obe03-frontend
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:${BACKEND_PORT:-8000}
+      NEXT_PUBLIC_SUPERSET_URL: http://localhost:${SUPERSET_PORT:-8088}
+      NEXT_PUBLIC_AIRFLOW_URL: http://localhost:${AIRFLOW_PORT:-8080}
+    ports:
+      - "${FRONTEND_PORT:-3000}:3000"
+    depends_on:
+      - backend
+
+  superset:
+    build:
+      context: ./superset
+    container_name: obe03-superset
+    restart: unless-stopped
+    environment:
+      SUPERSET_SECRET_KEY: ${SUPERSET_SECRET_KEY:-change-this-in-production}
+      SUPERSET_ADMIN_USERNAME: ${SUPERSET_ADMIN_USERNAME:-admin}
+      SUPERSET_ADMIN_PASSWORD: ${SUPERSET_ADMIN_PASSWORD:-admin}
+      SUPERSET_ADMIN_EMAIL: admin@example.com
+      POSTGRES_DB: ${POSTGRES_DB:-manufacturing_dw}
+      POSTGRES_USER: ${POSTGRES_USER:-manufacturing}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-manufacturing}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+    ports:
+      - "${SUPERSET_PORT:-8088}:8088"
+    volumes:
+      - superset_home:/app/superset_home
+      - ./superset/provision:/app/provision:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  superset_home:
