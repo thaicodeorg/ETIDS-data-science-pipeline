@@ -1,0 +1,13 @@
+# Lab 4 Reflection
+
+## Main Dashboard Insight
+The dashboard shows that...
+
+## Supporting Evidence
+The main evidence is...
+
+## Recommended Action
+Management should...
+
+## Data Quality or RLS Caution
+The interpretation should consider...
