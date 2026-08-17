@@ -1,0 +1,11 @@
+Feature,Importance,Operational Meaning,Operational Impact,Priority
+defect_rate,0.7191973837062283,Operational metric: defect_rate,🚨 CRITICAL - Immediate monitoring required,P0
+complexity_score,0.1557904177673272,Operational metric: complexity_score,🚨 CRITICAL - Immediate monitoring required,P0
+product_id,0.029291125189175635,Operational metric: product_id,⚡ HIGH - Priority for improvement,P1
+scrap_rate,0.023837544531612086,Operational metric: scrap_rate,⚡ HIGH - Priority for improvement,P1
+product_family,0.013105943038853344,Operational metric: product_family,📊 MODERATE - Monitor regularly,P2
+setup_minutes,0.0106282194356883,Operational metric: setup_minutes,📊 MODERATE - Monitor regularly,P2
+speed_ratio,0.006912822763217392,Operational metric: speed_ratio,📌 LOW - Standard monitoring,P3
+runtime_minutes,0.006829252116923507,Operational metric: runtime_minutes,📌 LOW - Standard monitoring,P3
+work_order_id,0.005137014193275182,Operational metric: work_order_id,📌 LOW - Standard monitoring,P3
+machine_id,0.005112003146915115,Operational metric: machine_id,📌 LOW - Standard monitoring,P3

@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-08-17T13:01:29.148235",
+  "model_type": "<class 'sklearn.ensemble._forest.RandomForestClassifier'>",
+  "performance": {
+    "train_f1": 0.9867198256637658,
+    "test_f1": 0.9837489151933156,
+    "train_auc": 0.9999787023876524,
+    "test_auc": 0.9835067352631757,
+    "f1_gap": 0.002970910470450172
+  },
+  "data_quality": {
+    "score": 100,
+    "issues": [],
+    "warnings": []
+  },
+  "leakage_risk": {
+    "score": 80,
+    "risks": [],
+    "warnings": [
+      "\u26a0\ufe0f Time columns detected: runtime_minutes. Ensure no future information is used.",
+      "\u26a0\ufe0f Aggregated features detected: avg_temperature_c. Ensure aggregation doesn't use target."
+    ]
+  },
+  "overfitting_risk": {
+    "score": 99.70290895295499,
+    "risks": [],
+    "warnings": []
+  },
+  "readiness": {
+    "score": 100.0,
+    "level": "\u2705 PRODUCTION READY",
+    "recommendation": "\u2705 APPROVED FOR PRODUCTION",
+    "criteria": {
+      "Data Quality": true,
+      "Leakage Risk": true,
+      "Overfitting Risk": "True",
+      "Performance": "True",
+      "Class Balance": "True",
+      "Cross-Validation": true,
+      "Explainability": true
+    }
+  },
+  "cautions": [],
+  "limitations": [
+    "\ud83d\udccc Model performance may vary across different production shifts",
+    "\ud83d\udccc External factors (weather, supply chain) not captured in model",
+    "\ud83d\udccc Model should be monitored and retrained periodically"
+  ],
+  "assumptions": [
+    "\u2705 Assumption: Training data represents current production patterns",
+    "\u2705 Assumption: Feature relationships remain stable over time",
+    "\u2705 Assumption: No significant changes in manufacturing process"
+  ]
+}
