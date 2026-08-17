@@ -1,0 +1,84 @@
+relative_path,file_type,row_count,column_count,description
+00_documentation/README.md,md,n/a,n/a,documentation or lab brief
+00_documentation/data_catalog.csv,csv,75,5,synthetic manufacturing dataset table or documentation table
+00_documentation/data_dictionary.csv,csv,757,7,synthetic manufacturing dataset table or documentation table
+00_documentation/data_quality_rules.csv,csv,9,6,synthetic manufacturing dataset table or documentation table
+00_documentation/entity_relationship_map.csv,csv,11,5,synthetic manufacturing dataset table or documentation table
+00_documentation/etids_alignment_matrix.csv,csv,16,6,synthetic manufacturing dataset table or documentation table
+00_documentation/scenario_ground_truth.csv,csv,8,5,synthetic manufacturing dataset table or documentation table
+00_documentation/synthetic_generation_profile.json,json,n/a,n/a,metadata or generation profile
+01_raw/blockchain/smart_contract_event.csv,csv,938,7,synthetic manufacturing dataset table or documentation table
+01_raw/blockchain/supply_chain_transaction.csv,csv,3200,12,synthetic manufacturing dataset table or documentation table
+01_raw/cmms/maintenance_log.csv,csv,290,13,synthetic manufacturing dataset table or documentation table
+01_raw/edge/edge_device_log.jsonl,jsonl,3500,n/a,synthetic event/document stream
+01_raw/erp/inventory_movement.csv,csv,9000,10,synthetic manufacturing dataset table or documentation table
+01_raw/erp/invoice.csv,csv,5000,12,synthetic manufacturing dataset table or documentation table
+01_raw/erp/sales_order.csv,csv,5225,14,synthetic manufacturing dataset table or documentation table
+01_raw/hr/operator_master.csv,csv,72,10,synthetic manufacturing dataset table or documentation table
+01_raw/images/defect_image_metadata.csv,csv,240,8,synthetic manufacturing dataset table or documentation table
+01_raw/images/defect_images/*/*.png,png,240,n/a,synthetic 64x64 grayscale surface defect images; see defect_image_metadata.csv
+01_raw/logistics/shipment.csv,csv,5000,14,synthetic manufacturing dataset table or documentation table
+01_raw/master/calendar_master.csv,csv,365,9,synthetic manufacturing dataset table or documentation table
+01_raw/master/customer_master.csv,csv,120,8,synthetic manufacturing dataset table or documentation table
+01_raw/master/data_quality_rules.csv,csv,9,6,synthetic manufacturing dataset table or documentation table
+01_raw/master/line_master.csv,csv,6,9,synthetic manufacturing dataset table or documentation table
+01_raw/master/machine_master.csv,csv,36,14,synthetic manufacturing dataset table or documentation table
+01_raw/master/plant_master.csv,csv,3,10,synthetic manufacturing dataset table or documentation table
+01_raw/master/product_master.csv,csv,80,13,synthetic manufacturing dataset table or documentation table
+01_raw/master/supplier_master.csv,csv,18,9,synthetic manufacturing dataset table or documentation table
+01_raw/mes/production_plan.csv,csv,2190,11,synthetic manufacturing dataset table or documentation table
+01_raw/mes/production_run.csv,csv,11410,19,synthetic manufacturing dataset table or documentation table
+01_raw/mes/shift_production.csv,csv,5705,16,synthetic manufacturing dataset table or documentation table
+01_raw/mes/work_order.csv,csv,5750,18,synthetic manufacturing dataset table or documentation table
+01_raw/nlp/maintenance_notes.csv,csv,290,7,synthetic manufacturing dataset table or documentation table
+01_raw/nlp/rag_policy_docs.jsonl,jsonl,8,n/a,synthetic event/document stream
+01_raw/privacy/federated_client_map.csv,csv,3,4,synthetic manufacturing dataset table or documentation table
+01_raw/privacy/privacy_risk_records.csv,csv,72,8,synthetic manufacturing dataset table or documentation table
+01_raw/qms/customer_complaint.csv,csv,850,9,synthetic manufacturing dataset table or documentation table
+01_raw/qms/quality_inspection.csv,csv,11410,16,synthetic manufacturing dataset table or documentation table
+01_raw/scada/alarm_event.csv,csv,1454,8,synthetic manufacturing dataset table or documentation table
+01_raw/scada/downtime_event.csv,csv,9826,11,synthetic manufacturing dataset table or documentation table
+01_raw/scada/machine_state_event.csv,csv,41324,10,synthetic manufacturing dataset table or documentation table
+01_raw/scada/mqtt_telemetry.jsonl,jsonl,6500,n/a,synthetic event/document stream
+01_raw/scada/sensor_reading.csv,csv,315629,15,synthetic manufacturing dataset table or documentation table
+02_clean/star_schema/dim_customer.csv,csv,120,8,synthetic manufacturing dataset table or documentation table
+02_clean/star_schema/dim_date.csv,csv,365,9,synthetic manufacturing dataset table or documentation table
+02_clean/star_schema/dim_line.csv,csv,6,9,synthetic manufacturing dataset table or documentation table
+02_clean/star_schema/dim_machine.csv,csv,36,14,synthetic manufacturing dataset table or documentation table
+02_clean/star_schema/dim_plant.csv,csv,3,10,synthetic manufacturing dataset table or documentation table
+02_clean/star_schema/dim_product.csv,csv,80,13,synthetic manufacturing dataset table or documentation table
+02_clean/star_schema/fact_production_daily.csv,csv,2135,15,synthetic manufacturing dataset table or documentation table
+02_clean/star_schema/fact_quality_daily.csv,csv,10461,8,synthetic manufacturing dataset table or documentation table
+02_clean/star_schema/fact_sales.csv,csv,5000,12,synthetic manufacturing dataset table or documentation table
+02_clean/star_schema/fact_shipment.csv,csv,5000,14,synthetic manufacturing dataset table or documentation table
+03_features/automl_modeling_table.csv,csv,11410,21,synthetic manufacturing dataset table or documentation table
+03_features/delivery_risk_features.csv,csv,5000,18,synthetic manufacturing dataset table or documentation table
+03_features/demand_forecast_daily.csv,csv,7300,8,synthetic manufacturing dataset table or documentation table
+03_features/federated_learning/P01_quality_client.csv,csv,3802,21,synthetic manufacturing dataset table or documentation table
+03_features/federated_learning/P02_quality_client.csv,csv,3818,21,synthetic manufacturing dataset table or documentation table
+03_features/federated_learning/P03_quality_client.csv,csv,3790,21,synthetic manufacturing dataset table or documentation table
+03_features/graph_edges_machine_product_supplier.csv,csv,229,4,synthetic manufacturing dataset table or documentation table
+03_features/graph_nodes.csv,csv,134,5,synthetic manufacturing dataset table or documentation table
+03_features/machine_failure_features.csv,csv,13140,14,synthetic manufacturing dataset table or documentation table
+03_features/monitoring_current_drifted.csv,csv,2200,22,synthetic manufacturing dataset table or documentation table
+03_features/monitoring_reference.csv,csv,2200,22,synthetic manufacturing dataset table or documentation table
+03_features/oee_daily_line.csv,csv,2135,15,synthetic manufacturing dataset table or documentation table
+03_features/quality_risk_features.csv,csv,11410,21,synthetic manufacturing dataset table or documentation table
+03_features/responsible_ai_fairness_case.csv,csv,6000,8,synthetic manufacturing dataset table or documentation table
+04_model_targets/data_quality_issues_ground_truth.csv,csv,2383,5,synthetic manufacturing dataset table or documentation table
+04_model_targets/delivery_risk_label.csv,csv,5000,7,synthetic manufacturing dataset table or documentation table
+04_model_targets/machine_failure_label.csv,csv,13140,6,synthetic manufacturing dataset table or documentation table
+04_model_targets/quality_risk_label.csv,csv,11410,5,synthetic manufacturing dataset table or documentation table
+05_dashboard/delivery_risk_summary.csv,csv,5,2,synthetic manufacturing dataset table or documentation table
+05_dashboard/oee_summary_by_line.csv,csv,2135,15,synthetic manufacturing dataset table or documentation table
+05_dashboard/plant_performance_summary.csv,csv,3,7,synthetic manufacturing dataset table or documentation table
+05_dashboard/quality_defect_pareto.csv,csv,6,4,synthetic manufacturing dataset table or documentation table
+06_labs/assignment1_synthetic_data_case.csv,csv,3,3,synthetic manufacturing dataset table or documentation table
+06_labs/assignment2_iot_agentic_ai_tasks.csv,csv,4,5,synthetic manufacturing dataset table or documentation table
+06_labs/final_integrative_case_questions.csv,csv,4,3,synthetic manufacturing dataset table or documentation table
+06_labs/lab_support_index.csv,csv,16,6,synthetic manufacturing dataset table or documentation table
+06_labs/midterm_dataset_review_questions.csv,csv,3,3,synthetic manufacturing dataset table or documentation table
+06_labs/research_mapping_cases.csv,csv,4,6,synthetic manufacturing dataset table or documentation table
+06_labs/term_project_brief.md,md,n/a,n/a,documentation or lab brief
+99_scripts/generation_notes.md,md,n/a,n/a,documentation or lab brief
+README.md,md,n/a,n/a,documentation or lab brief

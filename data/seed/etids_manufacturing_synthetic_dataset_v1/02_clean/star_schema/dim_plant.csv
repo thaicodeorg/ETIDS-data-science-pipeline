@@ -1,0 +1,4 @@
+plant_id,plant_name,region,country,timezone,utc_offset,latitude,longitude,industry_cluster,capacity_units_per_day
+P01,North Assembly Plant,Central,Thailand,Asia/Bangkok,+07:00,13.7563,100.5018,electronics,58000
+P02,Eastern Precision Plant,Eastern,Thailand,Asia/Bangkok,+07:00,13.3611,100.9847,automotive_components,72000
+P03,Highland Components Plant,Northern,Thailand,Asia/Bangkok,+07:00,18.7883,98.9853,industrial_devices,44000

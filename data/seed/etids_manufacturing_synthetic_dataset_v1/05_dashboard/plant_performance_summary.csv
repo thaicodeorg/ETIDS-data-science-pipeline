@@ -1,0 +1,4 @@
+plant_id,plant_name,avg_oee,total_good_quantity,total_scrap_quantity,total_downtime_minutes,avg_energy_intensity
+P01,North Assembly Plant,0.7009,33774450,1124537,79870.36,0.12165
+P02,Eastern Precision Plant,0.6914,21145751,694006,82686.73,0.12393
+P03,Highland Components Plant,0.7022,30963907,1006293,80001.67,0.12135

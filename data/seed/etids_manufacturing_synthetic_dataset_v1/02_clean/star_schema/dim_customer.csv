@@ -1,0 +1,121 @@
+customer_id,customer_name,region,country,customer_segment,priority_level,credit_risk_score,created_date
+CUST-0001,Customer 0001 Manufacturing Ltd.,North America,USA,key_account,high,18.4,2018-03-30
+CUST-0002,Customer 0002 Manufacturing Ltd.,Europe,Japan,standard,low,52.9,2021-02-25
+CUST-0003,Customer 0003 Manufacturing Ltd.,North America,Thailand,standard,low,63.2,2024-09-29
+CUST-0004,Customer 0004 Manufacturing Ltd.,Thailand,Malaysia,standard,low,54.2,2022-08-27
+CUST-0005,Customer 0005 Manufacturing Ltd.,Thailand,Japan,key_account,high,26.4,2022-12-16
+CUST-0006,Customer 0006 Manufacturing Ltd.,North America,USA,key_account,high,5,2018-10-11
+CUST-0007,Customer 0007 Manufacturing Ltd.,Thailand,Singapore,key_account,high,55.4,2022-03-10
+CUST-0008,Customer 0008 Manufacturing Ltd.,North America,Germany,standard,normal,45.6,2021-11-09
+CUST-0009,Customer 0009 Manufacturing Ltd.,ASEAN,Germany,standard,normal,49.2,2025-02-28
+CUST-0010,Customer 0010 Manufacturing Ltd.,North America,Japan,standard,normal,42.7,2018-11-25
+CUST-0011,Customer 0011 Manufacturing Ltd.,Thailand,Singapore,standard,normal,27.2,2018-02-11
+CUST-0012,Customer 0012 Manufacturing Ltd.,East Asia,Japan,standard,normal,10.3,2018-02-03
+CUST-0013,Customer 0013 Manufacturing Ltd.,Thailand,Vietnam,spot_market,low,44.6,2020-02-08
+CUST-0014,Customer 0014 Manufacturing Ltd.,ASEAN,USA,key_account,high,41.9,2019-11-25
+CUST-0015,Customer 0015 Manufacturing Ltd.,Europe,Vietnam,standard,normal,53.2,2023-12-28
+CUST-0016,Customer 0016 Manufacturing Ltd.,Europe,Singapore,standard,low,75.6,2023-11-20
+CUST-0017,Customer 0017 Manufacturing Ltd.,ASEAN,USA,spot_market,low,38.4,2020-06-23
+CUST-0018,Customer 0018 Manufacturing Ltd.,Thailand,Germany,spot_market,normal,43.5,2019-09-10
+CUST-0019,Customer 0019 Manufacturing Ltd.,North America,Malaysia,standard,normal,29.4,2020-11-08
+CUST-0020,Customer 0020 Manufacturing Ltd.,East Asia,Germany,standard,normal,32.8,2024-06-01
+CUST-0021,Customer 0021 Manufacturing Ltd.,ASEAN,Germany,standard,normal,37.5,2020-05-22
+CUST-0022,Customer 0022 Manufacturing Ltd.,East Asia,Singapore,standard,normal,48.4,2021-01-03
+CUST-0023,Customer 0023 Manufacturing Ltd.,Thailand,Vietnam,standard,low,59.0,2024-08-15
+CUST-0024,Customer 0024 Manufacturing Ltd.,East Asia,Vietnam,standard,normal,32.0,2022-08-30
+CUST-0025,Customer 0025 Manufacturing Ltd.,Thailand,USA,spot_market,normal,9.1,2019-07-27
+CUST-0026,Customer 0026 Manufacturing Ltd.,Thailand,Thailand,key_account,high,66.3,2017-05-16
+CUST-0027,Customer 0027 Manufacturing Ltd.,East Asia,Malaysia,standard,low,53.2,2020-01-21
+CUST-0028,Customer 0028 Manufacturing Ltd.,Thailand,Japan,standard,normal,54.1,2023-11-19
+CUST-0029,Customer 0029 Manufacturing Ltd.,North America,USA,standard,low,31.1,2018-03-20
+CUST-0030,Customer 0030 Manufacturing Ltd.,East Asia,USA,standard,normal,44.2,2020-09-26
+CUST-0031,Customer 0031 Manufacturing Ltd.,East Asia,USA,key_account,high,53.4,2020-01-26
+CUST-0032,Customer 0032 Manufacturing Ltd.,Europe,USA,key_account,high,39.4,2020-12-18
+CUST-0033,Customer 0033 Manufacturing Ltd.,East Asia,Germany,spot_market,normal,54.8,2020-11-09
+CUST-0034,Customer 0034 Manufacturing Ltd.,East Asia,Germany,standard,low,33.8,2021-11-12
+CUST-0035,Customer 0035 Manufacturing Ltd.,ASEAN,Germany,key_account,high,30.7,2017-12-30
+CUST-0036,Customer 0036 Manufacturing Ltd.,Thailand,Japan,strategic,high,67.5,2021-04-16
+CUST-0037,Customer 0037 Manufacturing Ltd.,Thailand,Malaysia,spot_market,low,26.1,2017-11-20
+CUST-0038,Customer 0038 Manufacturing Ltd.,North America,USA,standard,low,21.4,2020-07-28
+CUST-0039,Customer 0039 Manufacturing Ltd.,Europe,Vietnam,strategic,high,43.7,2019-05-22
+CUST-0040,Customer 0040 Manufacturing Ltd.,ASEAN,USA,standard,low,57.4,2021-09-22
+CUST-0041,Customer 0041 Manufacturing Ltd.,North America,Thailand,standard,normal,43.4,2024-06-06
+CUST-0042,Customer 0042 Manufacturing Ltd.,North America,Germany,standard,normal,45.4,2021-02-27
+CUST-0043,Customer 0043 Manufacturing Ltd.,ASEAN,Germany,key_account,high,33.3,2021-11-05
+CUST-0044,Customer 0044 Manufacturing Ltd.,Europe,Malaysia,standard,normal,45.7,2018-02-25
+CUST-0045,Customer 0045 Manufacturing Ltd.,Europe,USA,spot_market,normal,5,2021-01-23
+CUST-0046,Customer 0046 Manufacturing Ltd.,Thailand,USA,spot_market,normal,45.3,2018-10-16
+CUST-0047,Customer 0047 Manufacturing Ltd.,North America,USA,key_account,high,56.1,2024-05-14
+CUST-0048,Customer 0048 Manufacturing Ltd.,ASEAN,Thailand,standard,normal,52.1,2019-11-24
+CUST-0049,Customer 0049 Manufacturing Ltd.,East Asia,Singapore,standard,normal,22.0,2024-06-30
+CUST-0050,Customer 0050 Manufacturing Ltd.,Europe,Germany,strategic,high,34.0,2024-02-05
+CUST-0051,Customer 0051 Manufacturing Ltd.,ASEAN,Singapore,key_account,high,48.7,2021-01-13
+CUST-0052,Customer 0052 Manufacturing Ltd.,East Asia,USA,strategic,high,65.0,2019-06-01
+CUST-0053,Customer 0053 Manufacturing Ltd.,East Asia,Vietnam,spot_market,normal,49.2,2025-03-08
+CUST-0054,Customer 0054 Manufacturing Ltd.,Thailand,USA,strategic,high,39.3,2018-03-31
+CUST-0055,Customer 0055 Manufacturing Ltd.,ASEAN,Germany,key_account,high,20.4,2018-09-18
+CUST-0056,Customer 0056 Manufacturing Ltd.,East Asia,Vietnam,standard,normal,80.2,2023-07-26
+CUST-0057,Customer 0057 Manufacturing Ltd.,Europe,Germany,spot_market,low,18.6,2020-12-16
+CUST-0058,Customer 0058 Manufacturing Ltd.,ASEAN,Thailand,strategic,high,34.5,2018-04-04
+CUST-0059,Customer 0059 Manufacturing Ltd.,East Asia,Vietnam,standard,normal,13.7,2021-10-15
+CUST-0060,Customer 0060 Manufacturing Ltd.,East Asia,Malaysia,standard,normal,45.3,2019-01-23
+CUST-0061,Customer 0061 Manufacturing Ltd.,ASEAN,Singapore,standard,low,30.9,2021-04-02
+CUST-0062,Customer 0062 Manufacturing Ltd.,Thailand,Japan,standard,normal,5,2020-11-30
+CUST-0063,Customer 0063 Manufacturing Ltd.,ASEAN,Thailand,spot_market,low,37.8,2023-02-02
+CUST-0064,Customer 0064 Manufacturing Ltd.,Europe,USA,standard,normal,35.9,2020-06-03
+CUST-0065,Customer 0065 Manufacturing Ltd.,Europe,Vietnam,key_account,high,44.6,2021-10-01
+CUST-0066,Customer 0066 Manufacturing Ltd.,East Asia,Vietnam,standard,normal,57.0,2022-10-11
+CUST-0067,Customer 0067 Manufacturing Ltd.,North America,USA,standard,normal,64.8,2017-09-20
+CUST-0068,Customer 0068 Manufacturing Ltd.,North America,Thailand,strategic,high,54.8,2023-01-14
+CUST-0069,Customer 0069 Manufacturing Ltd.,Europe,Vietnam,key_account,high,30.4,2024-09-30
+CUST-0070,Customer 0070 Manufacturing Ltd.,Europe,Germany,standard,low,30.3,2018-07-18
+CUST-0071,Customer 0071 Manufacturing Ltd.,East Asia,Germany,standard,low,36.3,2021-04-20
+CUST-0072,Customer 0072 Manufacturing Ltd.,Europe,Vietnam,standard,normal,45.1,2024-11-05
+CUST-0073,Customer 0073 Manufacturing Ltd.,North America,Japan,spot_market,normal,39.1,2019-07-10
+CUST-0074,Customer 0074 Manufacturing Ltd.,Europe,Vietnam,key_account,high,29.8,2022-03-19
+CUST-0075,Customer 0075 Manufacturing Ltd.,Thailand,Germany,key_account,high,64.6,2023-09-11
+CUST-0076,Customer 0076 Manufacturing Ltd.,East Asia,Japan,key_account,high,60.0,2018-06-21
+CUST-0077,Customer 0077 Manufacturing Ltd.,Europe,Vietnam,key_account,high,63.9,2023-08-09
+CUST-0078,Customer 0078 Manufacturing Ltd.,East Asia,Thailand,key_account,high,46.1,2023-02-16
+CUST-0079,Customer 0079 Manufacturing Ltd.,North America,Germany,key_account,high,57.1,2021-11-28
+CUST-0080,Customer 0080 Manufacturing Ltd.,Europe,USA,standard,normal,72.4,2024-04-06
+CUST-0081,Customer 0081 Manufacturing Ltd.,Thailand,Thailand,key_account,high,32.0,2020-03-27
+CUST-0082,Customer 0082 Manufacturing Ltd.,East Asia,Vietnam,standard,low,44.7,2018-08-02
+CUST-0083,Customer 0083 Manufacturing Ltd.,Europe,USA,standard,normal,40.4,2024-02-22
+CUST-0084,Customer 0084 Manufacturing Ltd.,ASEAN,Malaysia,key_account,high,49.8,2018-10-09
+CUST-0085,Customer 0085 Manufacturing Ltd.,North America,Singapore,standard,low,14.7,2025-02-14
+CUST-0086,Customer 0086 Manufacturing Ltd.,North America,Germany,standard,normal,44.8,2021-11-15
+CUST-0087,Customer 0087 Manufacturing Ltd.,Europe,Thailand,standard,normal,31.6,2019-10-01
+CUST-0088,Customer 0088 Manufacturing Ltd.,East Asia,USA,spot_market,normal,59.9,2022-02-28
+CUST-0089,Customer 0089 Manufacturing Ltd.,Europe,Singapore,strategic,high,23.9,2018-04-22
+CUST-0090,Customer 0090 Manufacturing Ltd.,Europe,Japan,spot_market,normal,37.5,2022-04-22
+CUST-0091,Customer 0091 Manufacturing Ltd.,Thailand,Japan,standard,normal,54.8,2017-06-29
+CUST-0092,Customer 0092 Manufacturing Ltd.,Europe,Malaysia,standard,normal,59.5,2021-04-12
+CUST-0093,Customer 0093 Manufacturing Ltd.,North America,Vietnam,spot_market,normal,49.3,2023-10-22
+CUST-0094,Customer 0094 Manufacturing Ltd.,East Asia,Singapore,spot_market,normal,50.2,2021-02-17
+CUST-0095,Customer 0095 Manufacturing Ltd.,East Asia,Japan,strategic,high,39.4,2020-11-30
+CUST-0096,Customer 0096 Manufacturing Ltd.,ASEAN,Thailand,key_account,high,85.3,2025-01-17
+CUST-0097,Customer 0097 Manufacturing Ltd.,Thailand,Singapore,standard,normal,24.8,2020-06-16
+CUST-0098,Customer 0098 Manufacturing Ltd.,Europe,USA,standard,normal,49.6,2019-09-04
+CUST-0099,Customer 0099 Manufacturing Ltd.,East Asia,Malaysia,standard,normal,16.0,2024-10-17
+CUST-0100,Customer 0100 Manufacturing Ltd.,Europe,USA,spot_market,normal,36.8,2022-11-11
+CUST-0101,Customer 0101 Manufacturing Ltd.,Thailand,USA,key_account,high,53.7,2025-01-04
+CUST-0102,Customer 0102 Manufacturing Ltd.,ASEAN,Japan,strategic,high,43.8,2022-10-19
+CUST-0103,Customer 0103 Manufacturing Ltd.,East Asia,Malaysia,strategic,high,63.2,2020-08-05
+CUST-0104,Customer 0104 Manufacturing Ltd.,ASEAN,Thailand,standard,low,39.7,2018-06-06
+CUST-0105,Customer 0105 Manufacturing Ltd.,Europe,Singapore,key_account,high,62.3,2021-09-24
+CUST-0106,Customer 0106 Manufacturing Ltd.,ASEAN,Thailand,strategic,high,48.7,2018-09-27
+CUST-0107,Customer 0107 Manufacturing Ltd.,East Asia,Singapore,spot_market,low,65.6,2022-07-15
+CUST-0108,Customer 0108 Manufacturing Ltd.,ASEAN,Japan,key_account,high,15.1,2023-11-17
+CUST-0109,Customer 0109 Manufacturing Ltd.,Europe,Thailand,key_account,high,45.4,2019-10-24
+CUST-0110,Customer 0110 Manufacturing Ltd.,North America,USA,standard,normal,42.3,2024-11-25
+CUST-0111,Customer 0111 Manufacturing Ltd.,Thailand,Japan,strategic,high,18.9,2020-03-12
+CUST-0112,Customer 0112 Manufacturing Ltd.,East Asia,Thailand,key_account,high,21.4,2023-10-23
+CUST-0113,Customer 0113 Manufacturing Ltd.,Europe,Japan,spot_market,low,63.8,2018-12-06
+CUST-0114,Customer 0114 Manufacturing Ltd.,Thailand,Thailand,spot_market,normal,53.4,2017-07-17
+CUST-0115,Customer 0115 Manufacturing Ltd.,Europe,Vietnam,spot_market,normal,41.9,2023-07-20
+CUST-0116,Customer 0116 Manufacturing Ltd.,Thailand,Germany,standard,low,65.1,2023-03-03
+CUST-0117,Customer 0117 Manufacturing Ltd.,East Asia,Japan,spot_market,normal,70.9,2020-11-11
+CUST-0118,Customer 0118 Manufacturing Ltd.,Europe,Japan,standard,normal,32.4,2022-03-23
+CUST-0119,Customer 0119 Manufacturing Ltd.,Thailand,Germany,standard,normal,26.4,2024-02-27
+CUST-0120,Customer 0120 Manufacturing Ltd.,East Asia,Germany,standard,normal,27.4,2017-08-02

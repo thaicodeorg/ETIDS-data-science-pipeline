@@ -1,0 +1,5 @@
+question_id,question,related_files
+F-01,Design an MLOps monitoring plan for quality-risk model drift.,monitoring_reference.csv; monitoring_current_drifted.csv
+F-02,Explain how federated learning could use plant client partitions without centralizing raw records.,federated_learning/*.csv; privacy_risk_records.csv
+F-03,Build an evidence chain from MQTT telemetry to maintenance action and blockchain traceability.,mqtt_telemetry.jsonl; edge_device_log.jsonl; maintenance_log.csv; supply_chain_transaction.csv
+F-04,Assess governance risks of using an automated model score to hold production lots.,responsible_ai_fairness_case.csv; rag_policy_docs.jsonl

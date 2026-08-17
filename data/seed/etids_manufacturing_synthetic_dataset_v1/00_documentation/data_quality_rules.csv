@@ -1,0 +1,10 @@
+rule_id,table_name,field_name,rule_description,severity,suggested_action
+DQ001,work_order,actual_end_datetime,actual_end_datetime must be after actual_start_datetime when status is completed,high,flag and exclude from schedule KPI until corrected
+DQ002,work_order,actual_quantity,actual_quantity must be greater than or equal to zero,high,investigate MES export and keep exception record
+DQ003,sensor_reading,temperature_c,temperature_c should normally be between 0 and 150 Celsius,medium,flag as sensor spike or calibration issue
+DQ004,quality_inspection,defect_count,defect_count must not exceed sample_size,high,reject record or correct with QMS source evidence
+DQ005,sales_order,promised_delivery_date,promised_delivery_date must be on or after order_date,medium,route to order management for confirmation
+DQ006,machine_state_event,event_end,event_end must be after event_start,high,reconstruct event window from SCADA logs
+DQ007,shipment,shipped_quantity,shipped_quantity should not exceed ordered_quantity for the order line,high,match shipment line against sales order
+DQ008,production_run,operator_id,"operator_id should exist in operator_master, blank values must be coded as UNKNOWN_OPERATOR",low,impute only for descriptive analysis; do not infer accountability
+DQ009,machine_state_event,reason_code,DOWN events should have a downtime reason code,medium,flag underreported downtime and review shift log

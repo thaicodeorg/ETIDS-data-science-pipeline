@@ -1,0 +1,7 @@
+line_id,plant_id,line_name,line_type,technology_level,shift_pattern,design_rate_units_per_hour,commission_date,active_flag
+L01,P01,P01-Line-1,SMT,edge_enabled,3x8,3226,2017-03-28,1
+L02,P01,P01-Line-2,CNC,edge_enabled,3x8,4559,2024-01-13,1
+L03,P02,P02-Line-1,Assembly,edge_enabled,3x8,2944,2023-03-12,1
+L04,P02,P02-Line-2,Packaging,mixed,3x8,1910,2022-09-21,1
+L05,P03,P03-Line-1,Testing,automated,3x8,2497,2023-04-16,1
+L06,P03,P03-Line-2,Molding,edge_enabled,3x8,4691,2021-06-04,1

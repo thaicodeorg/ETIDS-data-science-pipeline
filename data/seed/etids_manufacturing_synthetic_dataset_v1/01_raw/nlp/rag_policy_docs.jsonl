@@ -1,0 +1,8 @@
+{"doc_id": "SOP-OEE-001", "title": "OEE Calculation Standard", "text": "Availability equals runtime divided by planned production time. Performance compares actual output with theoretical output. Quality equals good output divided by total output."}
+{"doc_id": "SOP-QMS-014", "title": "Quality Hold Procedure", "text": "A quality hold must be created when defect rate exceeds the control threshold or when inspection fails critical dimensions."}
+{"doc_id": "SOP-CMMS-009", "title": "Preventive Maintenance Escalation", "text": "Machines with repeated alarms within seven days require inspection and a maintenance work request."}
+{"doc_id": "POL-AI-001", "title": "Responsible AI Use in Manufacturing Analytics", "text": "Model outputs must be explained, monitored for drift, and reviewed by process owners before operational action."}
+{"doc_id": "POL-DATA-003", "title": "Data Quality Control Rules", "text": "Negative quantities, end times before start times, and out-of-range sensor readings must be flagged before KPI calculation."}
+{"doc_id": "SOP-SCADA-002", "title": "SCADA Alarm Handling", "text": "Critical alarms should be acknowledged by the operator and linked to downtime or maintenance evidence when applicable."}
+{"doc_id": "SOP-LOG-018", "title": "Late Delivery Root Cause Coding", "text": "Late deliveries are assigned to production delay, material shortage, quality hold, or logistics delay based on evidence."}
+{"doc_id": "SOP-EDGE-005", "title": "Edge Device Telemetry Format", "text": "Each MQTT payload includes machine identifier, temperature, vibration, pressure, current, state, and data quality flag."}

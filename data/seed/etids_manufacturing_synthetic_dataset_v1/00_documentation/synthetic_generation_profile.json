@@ -1,0 +1,44 @@
+{
+  "dataset_name": "ETIDS Manufacturing Business Synthetic Dataset",
+  "version": "v1.0",
+  "seed": 20260709,
+  "date_range": {
+    "start": "2025-08-01",
+    "end": "2026-07-31"
+  },
+  "systems": [
+    "ERP",
+    "MES",
+    "SCADA",
+    "IIoT",
+    "QMS",
+    "CMMS",
+    "WMS/TMS",
+    "NLP/RAG",
+    "Edge/MQTT",
+    "Blockchain"
+  ],
+  "data_characteristics": {
+    "plants": 3,
+    "lines": 6,
+    "machines": 36,
+    "products": 80,
+    "customers": 120,
+    "work_orders": 5750,
+    "production_runs": 11410,
+    "sensor_rows_approx": "36 machines x 365 days x 24 hours + duplicates",
+    "defect_images": 240
+  },
+  "known_scenarios": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08"
+  ],
+  "privacy_note": "All identifiers and records are synthetic. Operator identifiers are pseudonymous and contain no real personal data.",
+  "business_note": "The dataset is intentionally noisy and should not be treated as a clean benchmark without inspecting data_quality_rules and ground truth issue records."
+}

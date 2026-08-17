@@ -244,6 +244,8 @@ def _make_dq_issues(work_order: pd.DataFrame, production_run: pd.DataFrame, qual
 def clean_and_validate() -> dict[str, Any]:
     """Build clean tables and the data-quality audit log."""
     engine = get_engine()
+    with engine.begin() as conn:
+        conn.execute(text("DROP SCHEMA IF EXISTS mart CASCADE"))
     work_order = _read_table("raw", "work_order")
     production_run = _read_table("raw", "production_run")
     quality = _read_table("raw", "quality_inspection")
@@ -679,6 +681,9 @@ def build_feature_marts() -> dict[str, Any]:
 
 
 def run_full_pipeline() -> dict[str, Any]:
+    engine = get_engine()
+    with engine.begin() as conn:
+        conn.execute(text("DROP SCHEMA IF EXISTS mart CASCADE"))
     return {
         "ingest": ingest_raw_data(),
         "clean": clean_and_validate(),
